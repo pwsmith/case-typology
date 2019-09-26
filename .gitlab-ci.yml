@@ -1,27 +1,19 @@
-image: "node:latest"
+image: node:latest
 
-stages:
-- build
-- pages
+pages:
+  cache:
+    paths:
+    - node_modules/
 
-build:
-  stage: build
   script:
   - npm install
   - mkdir public
   - mv {css,js,lib,plugin}/ quandt_brussels.html public/
-  artifacts:
-    name: public
-    expire_in: 31d
-    paths:
-    - public/
 
-pages:
-  stage: deploy
+  artifacts:
+    paths:
+    - public
   only:
     - master
-  artifacts:
-    paths:
-      - public
 
 
