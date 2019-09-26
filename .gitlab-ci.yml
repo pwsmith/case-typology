@@ -17,13 +17,11 @@ build:
     - public/
 
 pages:
-  stage: pages
-  dependencies:
-    - build
-  artifacts:
-    paths:
-      - public/
+  stage: deploy
   only:
     - master
+  artifacts:
+    paths:
+      - public
 
 
