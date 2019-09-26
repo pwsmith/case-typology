@@ -1,16 +1,30 @@
-image: node:4.2.2
+image: "node:latest"
+
+stages:
+- build
+- pages
+
+build:
+  stage: build
+  script:
+  - npm install --only=dev
+  - npm install --global grunt-cli
+  - grunt
+  - mkdir public
+  - mv {ressources,css,js,lib,plugin}/ index.html public/
+  artifacts:
+    name: public
+    expire_in: 31d
+    paths:
+    - public/
 
 pages:
-  cache:
-    paths:
-    - node_modules/
-
-  script:
-  - npm install hexo-cli -g
-  - npm install
-  - hexo deploy
+  stage: pages
+  dependencies:
+    - build
+  script: []
   artifacts:
     paths:
-    - public
+      - public/
   only:
     - master
