@@ -7,21 +7,26 @@ stages:
 build:
   stage: build
   script:
+  - npm install hexo-cli -g
   - npm install
   - mkdir public
   - mv {css,js,lib,plugin}/ quandt_brussels.html public/
+  - hexo deploy
   artifacts:
     name: public
     expire_in: 31d
     paths:
     - public/
 
-# pages:
-#   stage: pages
-#   dependencies:
-#     - build
-#   artifacts:
-#     paths:
-#       - public/
-#   only:
-#     - master
+pages:
+  stage: deploy
+  only:
+    - master
+  script:
+    - make build
+    - ls html
+    - cp -R html public
+    - ls public
+  artifacts:
+    paths:
+      - public
