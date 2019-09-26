@@ -18,12 +18,12 @@ build:
     paths:
     - public/
 
-pages:
-  stage: pages
-  dependencies:
-    - build
-  artifacts:
-    paths:
-      - public/
-  only:
-    - master
+# pages:
+#   stage: pages
+#   dependencies:
+#     - build
+#   artifacts:
+#     paths:
+#       - public/
+#   only:
+#     - master
