@@ -8,8 +8,6 @@ build:
   stage: build
   script:
   - npm install
-  - npm install --global grunt-cli
-  - grunt
   - mkdir public
   - mv {ressources,css,js,lib,plugin}/ index.html quandt_brussels.html public/
   artifacts:
