@@ -22,7 +22,6 @@ pages:
   stage: pages
   dependencies:
     - build
-  script: []
   artifacts:
     paths:
       - public/
