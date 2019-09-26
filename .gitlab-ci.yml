@@ -9,7 +9,7 @@ build:
   script:
   - npm install
   - mkdir public
-  - mv {ressources,css,js,lib,plugin}/ index.html quandt_brussels.html public/
+  - mv {css,js,lib,plugin}/ quandt_brussels.html public/
   artifacts:
     name: public
     expire_in: 31d
