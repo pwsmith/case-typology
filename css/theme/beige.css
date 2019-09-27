@@ -275,3 +275,25 @@ body {
 @media print {
   .backgrounds {
     background-color: #f7f3de; } }
+
+/*****
+*ADDITIONAL
+******/
+
+body {
+  /* background: #fff; */
+  /* background-color: white; */
+  counter-reset: example-counter 0;
+  /* color: white; */
+}
+
+.ex::before {
+  counter-increment: example-counter;
+  content:"(" counter(example-counter) ") ";
+}
+
+.exb::before {
+  counter-increment: example-counter;
+  content:"(" counter(example-counter) ") *";
+  padding-left: 2em;
+}

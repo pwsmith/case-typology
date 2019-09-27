@@ -2,17 +2,10 @@ body {
     /* background: #fff; */
     /* background-color: white; */
     counter-reset: example-counter 0;
-    color: white;
+    /* color: white; */
   }
-  .reveal .logo {
-    /* margin: 15px 0px; */
-    background: rgba(255, 255, 255, 0);
-    border: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
-
-  }
-
-.ex::before {
+  
+  .ex::before {
     counter-increment: example-counter;
     content:"(" counter(example-counter) ") ";
   }
@@ -22,6 +15,17 @@ body {
     content:"(" counter(example-counter) ") *";
     padding-left: 2em;
   }
+  .reveal .logo {
+    /* margin: 15px 0px; */
+    background: rgba(255, 255, 255, 0);
+    border: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
+
+  }
+
+
+
+
   .reveal {
     /* font-family: "Linux Biolinum O", sans-serif; */
     /* font-family: 'Open Sans', sans-serif; */
@@ -193,8 +197,8 @@ body {
   .reveal table th,
   .reveal table td {
     text-align: center;
-    padding: 0em 0.5em 0em 0.5em;
-    /*border-bottom: 1px solid; */
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-bottom: 1px solid;
   }
   
   .reveal table th[align="center"],

@@ -21,6 +21,16 @@ body {
   counter-reset: example-counter 0;
 }
 
+.ex::before {
+  counter-increment: example-counter;
+  content:"(" counter(example-counter) ") ";
+}
+
+.exb::before {
+  counter-increment: example-counter;
+  content:"(" counter(example-counter) ") *";
+  padding-left: 2em;
+}
 
 .reveal {
   /* font-family: "Linux Biolinum O", sans-serif; */
