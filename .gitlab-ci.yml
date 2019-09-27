@@ -8,7 +8,7 @@ pages:
   script:
   - npm install
   - mkdir public
-  - mv {css,js,lib,plugin}/ quandt_brussels.html GU-Logo-schwarz.png public/
+  - mv {css,js,lib,plugin}/ index.html quandt_brussels.html GU-Logo-schwarz.png public/
 
   artifacts:
     paths:
