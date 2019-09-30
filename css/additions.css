@@ -213,3 +213,12 @@ body {
   .reveal table tbody tr:last-child td {
     border-bottom: none; }
   
+.reveal #map { height: 650px;
+    }
+
+    .reveal #map2 { height: 650px;
+    }
+
+.reveal .citation{
+      color: #205b9f;
+    }

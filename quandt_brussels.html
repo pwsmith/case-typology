@@ -10,7 +10,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/additions.css">
+  
+  <link rel="stylesheet" type="text/css" href="js/leaflet/leaflet.css" />
+        <script type="text/javascript" src="js/leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="js/leaflet/leafletembed.js"></script>
+        <script type="text/javascript" src="js/leaflet/numbermap.js"></script>
+
+
+       
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -21,6 +28,8 @@
       
   </style>
   <link rel="stylesheet" href="css/theme/sof.css" id="theme">
+
+
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -32,6 +41,7 @@
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
+  <link rel="stylesheet" href="css/additions.css">
 </head>
 <body>
   <div class="reveal">
@@ -171,12 +181,17 @@
   </tbody>
 </table>
 <p style="margin-bottom:1em;"></p>
+</section>
+<section>
+  <h2>Generalisations</h2>
+<ol>
+    <li><span class='boldface'>(*ABA)</span>: If the comparative is suppletive, then the superlative is also suppletive.</li>
+    <li><span class='boldface'>(*AAB)</span>: For the superlative to be suppletive, then comparative must also be.</li>
+</ol>
 <ul>
-  <li>Generalisations:</li>
-  <ul>
-    <li>If the comparative is suppletive, the superlative is also suppletive.</li>
-    <li>For the superlative to be suppletive, then comparative must also be.</li>
-  </ul>
+  <li>The second is not of interest here.</li>
+  <li>AAB patterns in suppletion are found in other areas</li>
+  <li>*ABA will be the focus of the remainder of the talk.</li>
 </ul>
 </section>
 <section class="slide level2"> <h2>Robustness</h2>
@@ -326,284 +341,7 @@
 </section>
   </section>
 
-<section>
-<section class="title-slide slide level1">
-<h1>Pronominal case</h1>
-</section>
-<section class="slide level2"> <h2>Morphological Case</h2>
-<ul>
-  <li><span class=italic>Case</span> encodes the roles that items play in sentences.</li>
-  <li>In German (usually):</li>
-  <ul>
-    <li>Nominative = subject</li>
-    <li>Accusative = (direct) object</li>
-    <li>Dative = goal/indirect object</li>
-  </ul>
-<li>Case has been argued to be complex, in a manner akin to what Bobaljik proposes for adjective gradation (Caha 2009).</li>
-</ul>
-</section>
-<section class="slide level2"> <h2>Bulding the survey</h2>
-<ul>
-  <li>We looked for patterns suppletion for case in pronouns (<span class=italic>we~us</span>).</li>
-  <li>In order to be instructive, languages need to show 3+ case distinctions.</li>
-  <li>We ordered the cases on a hierarchy following Marantz (1991):</li>
-  <ul>
-    <li><span class="sc">Nominative–Accusative–Dative</span></li>
-    <li><span class="sc">Absolutive–Ergative–Dative</span></li>
-    <li>Since this doesn't matter, I'll use Case 1, Case 2, Case 3</li>
-  </ul>
-</ul>
-</section>
-<section class="slide level2"> <h2>Case Findings</h2>
-<table>
-  <caption>Overall results of our survey for case</caption>
-  <thead>
-    <th>Pattern</th>
-    <th><span class=italic>n </span>attested</th>
-    <th>Example</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>AAA</td>
-      <td>numerous</td>
-      <td>Lezgian</td>
-    </tr>
-    <tr>
-      <td>ABB</td>
-      <td>57</td>
-      <td>Indo-European</td>
-    </tr>
-    <tr>
-      <td>ABC</td>
-      <td>2</td>
-      <td>Khinalugh</td>
-    </tr>
-    <tr>
-      <td>AAB</td>
-      <td>10</td>
-      <td>Hunzib</td>
-    </tr>
-    <tr>
-      <td>ABA</td>
-      <td>---</td>
-      <td>---</td>
-    </tr>
-  </tbody>
-</table>
-<p class='whitespace'></p>
-<ul>
-  <li>Data drawn from over 160 languages.</li>
-</ul>
-</section>
-<section class="slide level2"> <h2>AAA</h2>
-<table>
-  <caption>AAA patterns in case suppletion</caption>
-  <thead>
-    <th>Case 1</th>
-    <th>Case 2</th>
-    <th>Case 3</th>
-    <th>Language</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>izú</td>
-      <td>izu</td>
-      <td>izu-s</td>
-      <td>Tabasaran</td>
-    </tr>
-    <tr>
-      <td>čun</td>
-      <td>čna</td>
-      <td>čaz</td>
-      <td>Lezgian</td>
-    </tr>
-    <tr>
-      <td>tā</td>      
-      <td>taī-le</td>
-      <td>tā-lāi</td>
-      <td>Nepali</td>      
-    </tr>
-  </tbody>
-</table>
-</section>
 
-
-<section>
-<h2>ABB Patterns</h2>
-<table>
-  <caption>ABB patterns in case</caption>
-  <thead>
-    <th>Case 1</th>
-    <th>Case 2</th>
-    <th>Case 3</th>
-    <th>Language</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>ol</td>
-      <td>anɨ</td>
-      <td>aɣaa</td>
-      <td>Khakas</td>
-    </tr>
-    <tr>
-      <td>mə</td>
-      <td>dibi</td>
-      <td>du-</td>
-      <td>Hunzib</td>
-    </tr>
-    <tr>
-      <td>àʔàŋ</td>
-      <td>nkàtí</td>
-      <td>kàtí</td>
-      <td>Kadugli</td>
-    </tr>
-      <td>ʔa</td>
-      <td>wit</td>
-      <td>witib</td>
-      <td>Pomo (SE)</td>
-  </tbody>
-</table>
-</section>
-
-<section>
-<h2>ABC Patterns</h2>
-<table>
-  <caption>ABC patterns in case</caption>
-  <thead>
-    <th>Case 1</th>
-    <th>Case 2</th>
-    <th>Case 3</th>
-    <th>Language</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>ajo</td>
-      <td>(a)të</td>
-      <td>asaj</td>
-      <td>Albanian</td>
-    </tr>
-    <tr>
-      <td>zɨ</td>
-      <td>jä</td>
-      <td>as(ɨr)</td>
-      <td>Khinalugh</td>
-    </tr>
-  </tbody>
-</table>
-</section>
-
-<section>
-<h2>AAB Patterns</h2>
-<table>
-  <caption>AAB patterns in case</caption>
-  <thead>
-    <th>Case 1</th>
-    <th>Case 2</th>
-    <th>Case 3</th>
-    <th>Language</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>woʔ</td>
-      <td>woʔot</td>
-      <td>weyaʔik</td>
-      <td>Yurok</td>
-    </tr>
-    <tr>
-      <td>niyi</td>
-      <td>niyi-ngga</td>
-      <td>nhoowoo</td>
-      <td>Gooniyandi</td>      
-    </tr>
-    <tr>
-      <td>narnaj</td>
-      <td>narnaj-bulu-yi</td>
-      <td>wurrugu</td>
-      <td>Wardaman</td>
-    </tr>
-  </tbody>
-</table>
-</section>
-<section class="slide level2"> <h2>Explanation</h2>
-  <div class="container">
-    <div class="col">
-      <ul>
-        <li>We propose that cases are contained within another, like with gradation.</li>
-        <li>More complex cases like <span class="sc">Dative</span> contain less context cases like <span class="sc">Accusative</span>, which in turn contain cases like <span class="sc">nominative</span>.</li>
-      </ul>
-    </div>
-    <div class="col">
-        <div class="mermaid">
-        graph TD
-        classDef empty fill:#ffffff,stroke-width:0px;
-        A[DP] --- B[b]
-        A --- C[Case 3]
-        B --- D[a]
-        B --- E[Case 2]
-        D --- F[Base]
-        D --- G[Case 1]
-        class A,B,C,D,E,F,G empty</div>
-    </div>
-  </div>
-</section>
-
-<section class="slide level2">
-<h2>Supporting Evidence</h2>
-<ul>
-  <li>There are instances where we can see transparent case containment.</li>
-</ul>
-<p class="whitespace"></p>
-<table>
-  <caption>Khanty transparent case containment</caption>
-  <thead>
-    <th></th>
-    <th><span class="sc">Nominative</span></th>
-    <th><span class="sc">Accusative</span></th>
-    <th><span class="sc">Dative</span></th>
-  </thead>
-  <tbody>
-    <tr>
-      <td><span class="sc">1sg</span></td>
-      <td>ma</td>
-      <td>ma:-<span class="boldface">ne:m</span></td>
-      <td>ma:-<span class="boldface">ne:m</span>-na</td>
-    </tr>
-    <tr>
-      <td><span class="sc">3sg</span></td>
-      <td>luw</td>
-      <td>luw-<span class="boldface">e:l</span></td>
-      <td>luw-<span class="boldface">e:l</span>-na</td>
-    </tr>
-    <tr>
-      <td><span class="sc">1pl</span></td>
-      <td>muŋ</td>
-      <td>muŋ-<span class="boldface">-e:w</span></td>
-      <td>muŋ-<span class="boldface">e:w</span>-na</td>
-    </tr>
-  </tbody>
-</table>
-<p class="whitespace"></p>
-<ul>
-  <li><span class="boldface">Caveat</span>: these are few and far between.</li>
-</ul>
-</section>
-
-<section>
-<h2>Discussion</h2>
-<ul>
-  <li>ABA patterns are not seen in case morphology.</li>
-  <li>AAB patterns <span class='italic'>are</span> seen</li>
-  <ul>
-    <li>No general ban against AAB (cf. Moskal 2018).</li>
-  </ul>
-  <li>Clear restrictions on suppletion in pronouns though.</li>
-  <li><span class='boldface'>Important:</span> There is <span class='italic'>no</span> semantic justification for this.</li>
-  <ul>
-    <li>Remarkably few theories of case would attribute a semantics to case.</li>
-  </ul>
-</ul>
-</section>
-</section>
 
 <section>
 <section class="title-slide slide level1">
@@ -611,8 +349,8 @@
 </section>
 <section class="slide level2"> <h2>Number</h2>
 <ul>
-  <li>We further tested this against morphological number</li>
-  <li>Again, (at least) a three-way number distinction is necessary</li>
+  <li>Number shows similar typological behaviour to gradation <a class="citation", href="https://www.cambridge.org/core/books/number/497D34AB7181174CB329E8358EB2BC36">(Corbett 2004)</a>, suggesting similar containment patterns.</li>
+  <li>At least a three-way number distinction is necessary to test *ABA.</li>
   <li>Concentrate on <span class="sc">singular–plural–dual</span></li>
   <ul>
     <li>singular = one entity</li>
@@ -658,6 +396,8 @@
   </tbody>
 </table>
 </section>
+
+
 
 <section>
 <h2>AAA Patterns</h2>
@@ -794,14 +534,14 @@
 <section>
 <h2>Explanation</h2>
 <ul>
-  <li>Simple version, see Smith et al (2019) for details.</li>
+  <li>Simple version, see <a class='citation' href='https://link.springer.com/article/10.1007/s11049-018-9425-0'>Smith et al (2019)</a> for details.</li>
 </ul>
 <div class='container'>
   <div class='colgrow'>
     <ul>
       <li>The features that make up the plural are contained within those that make up the dual.</li>
-      <li>Pl = [−Sing]</li>
-      <li>Dl = [−Sing, −Aug] </li>
+      <li>Plural = [−Sing]</li>
+      <li>Dual = [−Sing, −Aug] </li>
       <li>Any item suppletive for plural will also be suppletive for dual.</li>
     </ul>
   </div>
@@ -826,10 +566,13 @@
 <ul>
   <li>Again, ABA patterns are ruled out.</li>
   <ul>
-    <li>Complex categories in morphology are consistently structurally complex.</li>
+    <li>More evidence that categories in morphology are consistently structurally complex.</li>
   </ul>
-  <li>AAB is fine, in line with case.</li>
-  <li>There is a plausible semantic story here, unlike with case.</li>
+  <li>AAB patterns <span class='italic'>are</span> seen</li>
+      <ul>
+        <li>No general ban against AAB (cf. <a class='citation' href='https://www.glossa-journal.org/articles/10.5334/gjgl.362/'>Moskal 2018</a>).</li>
+      </ul>
+  <li>There is a plausible semantic story here.</li>
   <ul>
     <li>[±Sing] divides the referent into singulars and non-singulars.</li>
     <li>[±Aug] effectively classifies minimal vs. non-minimal groups.</li>
@@ -837,6 +580,295 @@
 </ul>
 </section>
 </section>
+
+<section>
+    <section class="title-slide slide level1">
+    <h1>Pronominal case</h1>
+    </section>
+    <section class="slide level2"> <h2>Morphological Case</h2>
+    <ul>
+      <li><span class=italic>Case</span> encodes the roles that items play in sentences.</li>
+      <li>In German (usually):</li>
+      <ul>
+        <li>Nominative = subject</li>
+        <li>Accusative = (direct) object</li>
+        <li>Dative = goal/indirect object</li>
+      </ul>
+    <li>Case has been argued to be complex <a class='citation' href='https://munin.uit.no/bitstream/handle/10037/2203/thesis.pdf?sequence=1'>(Caha 2009)</a>.</li>
+    </ul>
+    </section>
+    <section class="slide level2"> <h2>Bulding the survey</h2>
+    <ul>
+      <li>We looked for patterns suppletion for case in pronouns (<span class=italic>we~us</span>).</li>
+      <li>In order to be instructive, languages need to show 3+ case distinctions.</li>
+      <li>We ordered the cases on a hierarchy following <a class='citation' href='http://web.mit.edu/alya/Public/print/Marantz_Case___Licensing.pdf'>Marantz (1991)</a>:</li>
+      <ul>
+        <li><span class="sc">Nominative–Accusative–Dative</span></li>
+        <li><span class="sc">Absolutive–Ergative–Dative</span></li>
+        <li>Since this doesn't matter, I'll use Case 1, Case 2, Case 3</li>
+      </ul>
+    </ul>
+    </section>
+    <section class="slide level2"> <h2>Case Findings</h2>
+    <table>
+      <caption>Overall results of our survey for case</caption>
+      <thead>
+        <th>Pattern</th>
+        <th><span class=italic>n </span>attested</th>
+        <th>Example</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AAA</td>
+          <td>numerous</td>
+          <td>Lezgian</td>
+        </tr>
+        <tr>
+          <td>ABB</td>
+          <td>57</td>
+          <td>Indo-European</td>
+        </tr>
+        <tr>
+          <td>ABC</td>
+          <td>2</td>
+          <td>Khinalugh</td>
+        </tr>
+        <tr>
+          <td>AAB</td>
+          <td>10</td>
+          <td>Hunzib</td>
+        </tr>
+        <tr>
+          <td>ABA</td>
+          <td>---</td>
+          <td>---</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class='whitespace'></p>
+    <ul>
+      <li>Data drawn from over 160 languages.</li>
+    </ul>
+    
+    
+    </section>
+    <section>
+      <div id="map"></div>
+      
+              <script>
+              initmap();
+      
+              </script>
+      
+      </section>
+
+
+
+    <section class="slide level2"> <h2>AAA</h2>
+    <table>
+      <caption>AAA patterns in case suppletion</caption>
+      <thead>
+        <th>Case 1</th>
+        <th>Case 2</th>
+        <th>Case 3</th>
+        <th>Language</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>izú</td>
+          <td>izu</td>
+          <td>izu-s</td>
+          <td>Tabasaran</td>
+        </tr>
+        <tr>
+          <td>čun</td>
+          <td>čna</td>
+          <td>čaz</td>
+          <td>Lezgian</td>
+        </tr>
+        <tr>
+          <td>tā</td>      
+          <td>taī-le</td>
+          <td>tā-lāi</td>
+          <td>Nepali</td>      
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    
+    
+    <section>
+    <h2>ABB Patterns</h2>
+    <table>
+      <caption>ABB patterns in case</caption>
+      <thead>
+        <th>Case 1</th>
+        <th>Case 2</th>
+        <th>Case 3</th>
+        <th>Language</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ol</td>
+          <td>anɨ</td>
+          <td>aɣaa</td>
+          <td>Khakas</td>
+        </tr>
+        <tr>
+          <td>mə</td>
+          <td>dibi</td>
+          <td>du-</td>
+          <td>Hunzib</td>
+        </tr>
+        <tr>
+          <td>àʔàŋ</td>
+          <td>nkàtí</td>
+          <td>kàtí</td>
+          <td>Kadugli</td>
+        </tr>
+          <td>ʔa</td>
+          <td>wit</td>
+          <td>witib</td>
+          <td>Pomo (SE)</td>
+      </tbody>
+    </table>
+    </section>
+    
+    <section>
+    <h2>ABC Patterns</h2>
+    <table>
+      <caption>ABC patterns in case</caption>
+      <thead>
+        <th>Case 1</th>
+        <th>Case 2</th>
+        <th>Case 3</th>
+        <th>Language</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ajo</td>
+          <td>(a)të</td>
+          <td>asaj</td>
+          <td>Albanian</td>
+        </tr>
+        <tr>
+          <td>zɨ</td>
+          <td>jä</td>
+          <td>as(ɨr)</td>
+          <td>Khinalugh</td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    
+    <section>
+    <h2>AAB Patterns</h2>
+    <table>
+      <caption>AAB patterns in case</caption>
+      <thead>
+        <th>Case 1</th>
+        <th>Case 2</th>
+        <th>Case 3</th>
+        <th>Language</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>woʔ</td>
+          <td>woʔot</td>
+          <td>weyaʔik</td>
+          <td>Yurok</td>
+        </tr>
+        <tr>
+          <td>niyi</td>
+          <td>niyi-ngga</td>
+          <td>nhoowoo</td>
+          <td>Gooniyandi</td>      
+        </tr>
+        <tr>
+          <td>narnaj</td>
+          <td>narnaj-bulu-yi</td>
+          <td>wurrugu</td>
+          <td>Wardaman</td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    <section class="slide level2"> <h2>Explanation</h2>
+      <div class="container">
+        <div class="col">
+          <ul>
+            <li>We propose that cases are contained within another, like with gradation.</li>
+            <li>More complex cases like <span class="sc">Dative</span> contain less context cases like <span class="sc">Accusative</span>, which in turn contain cases like <span class="sc">nominative</span>.</li>
+          </ul>
+        </div>
+        <div class="col">
+            <div class="mermaid">
+            graph TD
+            classDef empty fill:#ffffff,stroke-width:0px;
+            A[DP] --- B[b]
+            A --- C[Dative]
+            B --- D[a]
+            B --- E[Accusative]
+            D --- F[Base]
+            D --- G[Nominative]
+            class A,B,C,D,E,F,G empty</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="slide level2">
+    <h2>Supporting Evidence</h2>
+    <ul>
+      <li>There are instances where we can see transparent case containment.</li>
+    </ul>
+    <!-- <p class="whitespace"></p> -->
+    <table>
+      <caption>Khanty transparent case containment</caption>
+      <thead>
+        <th></th>
+        <th><span class="sc">Nominative</span></th>
+        <th><span class="sc">Accusative</span></th>
+        <th><span class="sc">Dative</span></th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="sc">1sg</span></td>
+          <td>ma</td>
+          <td>ma:-<span class="boldface">ne:m</span></td>
+          <td>ma:-<span class="boldface">ne:m</span>-na</td>
+        </tr>
+        <tr>
+          <td><span class="sc">3sg</span></td>
+          <td>luw</td>
+          <td>luw-<span class="boldface">e:l</span></td>
+          <td>luw-<span class="boldface">e:l</span>-na</td>
+        </tr>
+        <tr>
+          <td><span class="sc">1pl</span></td>
+          <td>muŋ</td>
+          <td>muŋ-<span class="boldface">-e:w</span></td>
+          <td>muŋ-<span class="boldface">e:w</span>-na</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="whitespace"></p>
+    <ul>
+      <li><span class="boldface">Caveat</span>: these are few and far between.</li>
+    </ul>
+    </section>
+    
+    <section>
+    <h2>Discussion</h2>
+    <ul>
+      <li>ABA patterns are not seen in case morphology.</li>
+      <li>Clear restrictions on suppletion in pronouns though.</li>
+      <li><span class='boldface'>Important:</span> There is <span class='italic'>no</span> semantic justification for this.</li>
+      <ul>
+        <li>Remarkably few theories of case would attribute a semantics to case.</li>
+      </ul>
+    </ul>
+    </section>
+    </section>
 
 <section>
 <section class="title-slide slide level1">
@@ -848,13 +880,13 @@
 <ul>
   <li>Major finding: *ABA in case, number</li>
   <ul>
-    <li>Also: <span class='boldface'>adjectives</span> (Bobaljik 2012), <span class='boldface'>clusivity</span> (Moskal 2018), <span class='boldface'>possession</span> (van Vaal & Don 2018) and <span class='boldface'>(germanic) verbs</span> (Andersson 2018).</li>
+    <li>Also: <span class='boldface'>adjectives</span> (<a class='citation' href='https://mitpress.mit.edu/books/universals-comparative-morphology'>Bobaljik 2012</a>), <span class='boldface'>clusivity</span> (<a class='citation' href='https://www.glossa-journal.org/articles/10.5334/gjgl.362/'>Moskal 2018</a>), <span class='boldface'>possession</span> (<a class='citation' href='https://www.glossa-journal.org/articles/10.5334/gjgl.395/'>van Baal and Don</a>) and <span class='boldface'>(germanic) verbs</span> (<a class='citation' href='https://www.glossa-journal.org/articles/10.5334/gjgl.733/'>Andersson 2018</a>).</li>
   </ul>
   <li><span class='boldface'>Note:</span> This is a <span class='italic'>complete</span> absence of ABA patterns.</li>
   <li>Points towards a universal grammar explanation.</li>
     <ul>
       <li><span class='italic'>No</span> clear learning path based on positive evidence to *ABA.</li>
-      <li>Enforced containment of complex categories.</li>
+      <li>We cannot resort to semantics, given that *ABA holds in case.</li>
     </ul>
   <!-- <li>An alternative is to learn all irregularity.</li>
   <li>That is, the 'default' state of the learner is to regularise rules.</li>
@@ -864,9 +896,8 @@
 
 
 <section>
-<h2>UG?</h2>
+<h2>Is there an alternative?</h2>
 <ul>
-  <li>Is there an alternative?</li>
   <li>Our account rests on decomposing pronouns, in order to make rules.</li>
   <li>But then we need to tolerate some readjustment.</li>
   <li>It's often <span class='boldface'>not</span> clear where the segmentation should be.</li>
@@ -879,6 +910,7 @@
     <th>Case 2</th>
     <th>Case 3</th>
     <th>Language</th>
+    <th></th>
   </thead>
   <tbody>
       <tr>
@@ -886,12 +918,14 @@
         <td>zad</td>
         <td>zas</td>
         <td>Rutul</td>
+        <td>AAA</td>
       </tr>
       <tr>
         <td>bi</td>
         <td>namaigi</td>
         <td>nadada</td>
         <td>Khalkha</td>
+        <td>ABB</td>
       </tr>
   </tbody>
 </table>
@@ -901,7 +935,7 @@
 <section>
 <h2>Alternative</h2>
 <ul>
-  <li>In the absence of clear evidence, children learn irregularity holistically.</li>
+  <li>In the absence of clear evidence, assume that children learn irregularity holistically.</li>
   <li>Khalkha: ours vs. the alternative:</li>
 
   <div class='container'>
@@ -941,6 +975,25 @@
 <ul>
   <li><span class='boldface'>However</span>: remember that *ABA is a <span class='boldface'>complete</span> absence.</li>
   <li>Without containment of categories, it's hard to see how to derive *ABA.</li>
+  <li>Hypothetical:</li>
+  <div class='container'>
+    <div class='colgrow'>
+        <ul>
+            <li>√<span class='sc'>good</span> ⇔ good</li>
+            <li>√<span class='sc'>better</span> ⇔ better / __ <span class='sc'>comp</span></li>
+          </ul>
+    </div>
+    <div class='col'>
+      <div class='mermaid'>
+        graph TD
+        classDef empty fill:#ffffff,stroke-width:0px;
+          A[Adj] --- B["#8730;GOOD"]
+          A --- C[Sprl]
+        class A,B,C,D,E,F,G empty;
+      </div>
+    </div>
+  </div>
+  <li>This will produce an ABA pattern.</li>
 </ul>
 </section>
 <!-- <section class="slide level2">
