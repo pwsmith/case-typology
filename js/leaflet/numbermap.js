@@ -1,7 +1,7 @@
-var map;
-var ajaxRequest;
-var plotlist;
-var plotlayers=[];
+var map2;
+// var ajaxRequest;
+// var plotlist;
+// var plotlayers=[];
 
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
@@ -10,7 +10,7 @@ String.prototype.capitalize = function() {
 
 function init_num_map() {
 	// set up the map
-	map = new L.Map('map');
+	map2 = new L.Map('map2');
 
 	// create the tile layer with correct attribution
 	var osmUrl='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -18,47 +18,28 @@ function init_num_map() {
 	var osm = new L.TileLayer(osmUrl, {minZoom: 1, maxZoom: 9, attribution: osmAttrib});		
 
 	// start the map in South-East England
-	map.setView(new L.LatLng(0, 20),2);
-	map.addLayer(osm);
+	map2.setView(new L.LatLng(0, 20),2);
+	map2.addLayer(osm);
 
-	var aari = L.circle([6.00, 36.58], {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5,
+	var xhoo = L.circle([-24, 21.5], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-
-	var english = L.circle([52.00, 0.00], {
-		color: 'red',
-		fillColor: 'red',
-		radius: 100000
-	}).addTo(map);
-
-	var dutch = L.circle([52.50, 6.00], {
-		color: 'red',
-		fillColor: 'red',
-		radius: 100000
-	}).addTo(map);
-	// var popup = L.popup()
-	// .setLatLng([51.5, -0.09])
-	// .setContent("I am a standalone popup.")
-	// .openOn(map);
-
-	aari.bindPopup("Aari.");
-	aari.on('mouseover', function (e) {
+	}).addTo(map2);
+	xhoo.bindPopup('!Xhoo'.capitalize());
+	xhoo.on('mouseover', function (e) {
 		this.openPopup();
 	});
-	aari.on('mouseout', function (e) {
+	xhoo.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
 	var afrikaans = L.circle([-31, 22], {
-		color: 'red',
-		fillColor: '#f03',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-
-	afrikaans.bindPopup("afrikaans.");
+	}).addTo(map2);
+	afrikaans.bindPopup('afrikaans'.capitalize());
 	afrikaans.on('mouseover', function (e) {
 		this.openPopup();
 	});
@@ -66,43 +47,25 @@ function init_num_map() {
 		this.closePopup();
 	});
 
-var mohawk = L.circle([43.50, -75.25, ], {
-	color: 'red',
-	fillColor: '#f03',
-	radius: 100000
-}).addTo(map);
-mohawk.bindPopup('Akwesanse Mohawk');
-mohawk.on('mouseover', function (e) {
-	this.openPopup();
-});
-mohawk.on('mouseout', function (e) {
-	this.closePopup();
-});
-
-
-	english.bindPopup("English");
-	english.on('mouseover', function (e) {
+	var mohawk = L.circle([43.5, -74.25], {
+		color: 'blue',
+		fillColor: 'blue',
+		radius: 100000
+	}).addTo(map2);
+	mohawk.bindPopup('Akwesansne Mohawk'.capitalize());
+	mohawk.on('mouseover', function (e) {
 		this.openPopup();
 	});
-	english.on('mouseout', function (e) {
-		this.closePopup();
-	});
-
-	dutch.bindPopup("Dutch");
-	dutch.on('mouseover', function (e) {
-		this.openPopup();
-	});
-	dutch.on('mouseout', function (e) {
+	mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
 	var aleut = L.circle([54, -166], {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5,
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-	aleut.bindPopup('aleut');
+	}).addTo(map2);
+	aleut.bindPopup('aleut'.capitalize());
 	aleut.on('mouseover', function (e) {
 		this.openPopup();
 	});
@@ -111,10 +74,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var ambai = L.circle([-1.83, 136.5], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	ambai.bindPopup('ambai'.capitalize());
 	ambai.on('mouseover', function (e) {
 		this.openPopup();
@@ -124,10 +87,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var awtuw = L.circle([-3.58, 142], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	awtuw.bindPopup('awtuw'.capitalize());
 	awtuw.on('mouseover', function (e) {
 		this.openPopup();
@@ -137,10 +100,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var bardi = L.circle([-16.58, 122.92], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	bardi.bindPopup('bardi'.capitalize());
 	bardi.on('mouseover', function (e) {
 		this.openPopup();
@@ -150,10 +113,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var basque = L.circle([43, -3], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	basque.bindPopup('basque'.capitalize());
 	basque.on('mouseover', function (e) {
 		this.openPopup();
@@ -162,11 +125,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var berik = L.circle([-2.15, 138.83], {
-		color: 'red',
-		fillColor: 'red',
+	var berik = L.circle([-2.25, -138.83], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	berik.bindPopup('berik'.capitalize());
 	berik.on('mouseover', function (e) {
 		this.openPopup();
@@ -176,10 +139,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var bilua = L.circle([-7.75, 156.67], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	bilua.bindPopup('bilua'.capitalize());
 	bilua.on('mouseover', function (e) {
 		this.openPopup();
@@ -188,11 +151,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var biri = L.circle([-20.5, 146.5], {
-		color: 'red',
-		fillColor: 'red',
+	var biri = L.circle([-20.50, 146.50], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	biri.bindPopup('biri'.capitalize());
 	biri.on('mouseover', function (e) {
 		this.openPopup();
@@ -202,11 +165,11 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var fijian = L.circle([-17.83, 178], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-	fijian.bindPopup('fijian'.capitalize());
+	}).addTo(map2);
+	fijian.bindPopup('Boumaa Fijian'.capitalize());
 	fijian.on('mouseover', function (e) {
 		this.openPopup();
 	});
@@ -214,11 +177,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var burushashki = L.circle([36.5, 74.5], {
-		color: 'red',
-		fillColor: 'red',
+	var burushashki = L.circle([36.5, 75.5], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	burushashki.bindPopup('burushashki'.capitalize());
 	burushashki.on('mouseover', function (e) {
 		this.openPopup();
@@ -228,10 +191,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var camling = L.circle([27, 86.67], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	camling.bindPopup('camling'.capitalize());
 	camling.on('mouseover', function (e) {
 		this.openPopup();
@@ -241,10 +204,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var carib = L.circle([5.5, -56], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	carib.bindPopup('carib'.capitalize());
 	carib.on('mouseover', function (e) {
 		this.openPopup();
@@ -254,10 +217,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var cavinena = L.circle([-13.33, -66.5], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	cavinena.bindPopup('cavineña'.capitalize());
 	cavinena.on('mouseover', function (e) {
 		this.openPopup();
@@ -267,10 +230,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var chepang = L.circle([27.67, 84.75], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	chepang.bindPopup('chepang'.capitalize());
 	chepang.on('mouseover', function (e) {
 		this.openPopup();
@@ -280,10 +243,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var comanche = L.circle([33.5, -101.5], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	comanche.bindPopup('comanche'.capitalize());
 	comanche.on('mouseover', function (e) {
 		this.openPopup();
@@ -293,10 +256,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var crow = L.circle([47, -108], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	crow.bindPopup('crow'.capitalize());
 	crow.on('mouseover', function (e) {
 		this.openPopup();
@@ -305,11 +268,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var dagaare = L.circle([10.5, -2.67], {
-		color: 'red',
-		fillColor: 'red',
+	var dagaare = L.circle([10.50, -2.67], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	dagaare.bindPopup('dagaare'.capitalize());
 	dagaare.on('mouseover', function (e) {
 		this.openPopup();
@@ -319,10 +282,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var dolakha = L.circle([27.33, 86], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	dolakha.bindPopup('dolakha Newar'.capitalize());
 	dolakha.on('mouseover', function (e) {
 		this.openPopup();
@@ -331,11 +294,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var dumi = L.circle([27.25, 86.67], {
-		color: 'red',
-		fillColor: 'red',
+	var dumi = L.circle([27.75, 86.67], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	dumi.bindPopup('dumi'.capitalize());
 	dumi.on('mouseover', function (e) {
 		this.openPopup();
@@ -345,10 +308,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var dyirbal = L.circle([-17.83, 145.58], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	dyirbal.bindPopup('dyirbal'.capitalize());
 	dyirbal.on('mouseover', function (e) {
 		this.openPopup();
@@ -358,11 +321,11 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var pomo = L.circle([39, -122.67], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-	pomo.bindPopup('eastern Pomo'.capitalize());
+	}).addTo(map2);
+	pomo.bindPopup('Eastern Pomo'.capitalize());
 	pomo.on('mouseover', function (e) {
 		this.openPopup();
 	});
@@ -371,10 +334,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var evenki = L.circle([56, 125], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	evenki.bindPopup('evenki'.capitalize());
 	evenki.on('mouseover', function (e) {
 		this.openPopup();
@@ -384,10 +347,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var finnish = L.circle([62, 25], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	finnish.bindPopup('finnish'.capitalize());
 	finnish.on('mouseover', function (e) {
 		this.openPopup();
@@ -396,11 +359,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var enets = L.circle([67.50, 86.50], {
-		color: 'red',
-		fillColor: 'red',
+	var enets = L.circle([67.5, 86.5], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	enets.bindPopup('Forest Enets'.capitalize());
 	enets.on('mouseover', function (e) {
 		this.openPopup();
@@ -410,10 +373,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var gurinji = L.circle([-17.67, 130.67], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	gurinji.bindPopup('gurinji'.capitalize());
 	gurinji.on('mouseover', function (e) {
 		this.openPopup();
@@ -422,11 +385,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var hawaiian = L.circle([19.58, -155.50], {
-		color: 'red',
-		fillColor: 'red',
+	var hawaiian = L.circle([19.58, -155.5], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	hawaiian.bindPopup('hawaiian'.capitalize());
 	hawaiian.on('mouseover', function (e) {
 		this.openPopup();
@@ -436,10 +399,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var hopi = L.circle([36, -110], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	hopi.bindPopup('hopi'.capitalize());
 	hopi.on('mouseover', function (e) {
 		this.openPopup();
@@ -449,10 +412,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var hua = L.circle([-6.33, 145.33], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	hua.bindPopup('hua'.capitalize());
 	hua.on('mouseover', function (e) {
 		this.openPopup();
@@ -462,10 +425,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var isaka = L.circle([-2.83, 141.28], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	isaka.bindPopup('i\'saka'.capitalize());
 	isaka.on('mouseover', function (e) {
 		this.openPopup();
@@ -475,10 +438,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var ingush = L.circle([43.17, 45.08], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	ingush.bindPopup('ingush'.capitalize());
 	ingush.on('mouseover', function (e) {
 		this.openPopup();
@@ -487,11 +450,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var jarawara = L.circle([-7.5, -65.50], {
-		color: 'red',
-		fillColor: 'red',
+	var jarawara = L.circle([-7.5, -65.5], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	jarawara.bindPopup('jarawara'.capitalize());
 	jarawara.on('mouseover', function (e) {
 		this.openPopup();
@@ -501,10 +464,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var jaru = L.circle([-18.75, 128], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	jaru.bindPopup('jaru'.capitalize());
 	jaru.on('mouseover', function (e) {
 		this.openPopup();
@@ -514,10 +477,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var kamas = L.circle([52, 92], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	kamas.bindPopup('kamas'.capitalize());
 	kamas.on('mouseover', function (e) {
 		this.openPopup();
@@ -527,10 +490,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var kannada = L.circle([14, 76], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	kannada.bindPopup('kannada'.capitalize());
 	kannada.on('mouseover', function (e) {
 		this.openPopup();
@@ -540,10 +503,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var karadjeri = L.circle([-19, 122], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	karadjeri.bindPopup('karadjeri'.capitalize());
 	karadjeri.on('mouseover', function (e) {
 		this.openPopup();
@@ -553,10 +516,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var kayardild = L.circle([-17.05, 139.5], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	kayardild.bindPopup('kayardild'.capitalize());
 	kayardild.on('mouseover', function (e) {
 		this.openPopup();
@@ -566,10 +529,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var ket = L.circle([64, 87], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	ket.bindPopup('ket'.capitalize());
 	ket.on('mouseover', function (e) {
 		this.openPopup();
@@ -579,10 +542,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var kham = L.circle([28.5, 82.75], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	kham.bindPopup('kham'.capitalize());
 	kham.on('mouseover', function (e) {
 		this.openPopup();
@@ -592,10 +555,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var khanty = L.circle([65, 65], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	khanty.bindPopup('khanty'.capitalize());
 	khanty.on('mouseover', function (e) {
 		this.openPopup();
@@ -604,11 +567,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var kilivila = L.circle([-8.5, 151.8], {
-		color: 'red',
-		fillColor: 'red',
+	var kilivila = L.circle([-8.5, 151.08], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	kilivila.bindPopup('kilivila'.capitalize());
 	kilivila.on('mouseover', function (e) {
 		this.openPopup();
@@ -618,10 +581,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var koasati = L.circle([34.83, -85.17], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	koasati.bindPopup('koasati'.capitalize());
 	koasati.on('mouseover', function (e) {
 		this.openPopup();
@@ -631,10 +594,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var koromfe = L.circle([14.25, -0.92], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	koromfe.bindPopup('koromfe'.capitalize());
 	koromfe.on('mouseover', function (e) {
 		this.openPopup();
@@ -644,11 +607,11 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var yalanji = L.circle([-16, 145], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-	yalanji.bindPopup('kuku-Yalanji'.capitalize());
+	}).addTo(map2);
+	yalanji.bindPopup('Kuku-Yalanji'.capitalize());
 	yalanji.on('mouseover', function (e) {
 		this.openPopup();
 	});
@@ -656,11 +619,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var kuna = L.circle([8, -77.83], {
-		color: 'red',
-		fillColor: 'red',
+	var kuna = L.circle([8, -77.33], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	kuna.bindPopup('kuna (border)'.capitalize());
 	kuna.on('mouseover', function (e) {
 		this.openPopup();
@@ -670,10 +633,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var kunimaipa = L.circle([-8, 146.83], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	kunimaipa.bindPopup('kunimaipa'.capitalize());
 	kunimaipa.on('mouseover', function (e) {
 		this.openPopup();
@@ -683,10 +646,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var kwamera = L.circle([-19.58, 169.42], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	kwamera.bindPopup('kwamera'.capitalize());
 	kwamera.on('mouseover', function (e) {
 		this.openPopup();
@@ -695,11 +658,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var kwaza = L.circle([-12.58, 60.67], {
-		color: 'red',
-		fillColor: 'red',
+	var kwaza = L.circle([-12.58, -60.67], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	kwaza.bindPopup('kwaza'.capitalize());
 	kwaza.on('mouseover', function (e) {
 		this.openPopup();
@@ -709,10 +672,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var ladakhi = L.circle([34, 78], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	ladakhi.bindPopup('ladakhi'.capitalize());
 	ladakhi.on('mouseover', function (e) {
 		this.openPopup();
@@ -722,10 +685,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var lavukaleve = L.circle([-9.08, 159.2], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	lavukaleve.bindPopup('lavukaleve'.capitalize());
 	lavukaleve.on('mouseover', function (e) {
 		this.openPopup();
@@ -735,10 +698,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var lega = L.circle([-2.83, 27.17], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	lega.bindPopup('lega-Shabunda'.capitalize());
 	lega.on('mouseover', function (e) {
 		this.openPopup();
@@ -748,10 +711,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var lele = L.circle([9.08, 15.58], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	lele.bindPopup('lele'.capitalize());
 	lele.on('mouseover', function (e) {
 		this.openPopup();
@@ -761,10 +724,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var lezgian = L.circle([41.67, 47.83], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	lezgian.bindPopup('lezgian'.capitalize());
 	lezgian.on('mouseover', function (e) {
 		this.openPopup();
@@ -774,10 +737,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var limbu = L.circle([27.17, 87.75], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	limbu.bindPopup('limbu'.capitalize());
 	limbu.on('mouseover', function (e) {
 		this.openPopup();
@@ -787,10 +750,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var macushi = L.circle([4, -60], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	macushi.bindPopup('macushi'.capitalize());
 	macushi.on('mouseover', function (e) {
 		this.openPopup();
@@ -799,11 +762,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var malayalam = L.circle([10, 76.50], {
-		color: 'red',
-		fillColor: 'red',
+	var malayalam = L.circle([10, 76.5], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	malayalam.bindPopup('malayalam'.capitalize());
 	malayalam.on('mouseover', function (e) {
 		this.openPopup();
@@ -813,10 +776,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var manam = L.circle([-4, 145], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	manam.bindPopup('manam'.capitalize());
 	manam.on('mouseover', function (e) {
 		this.openPopup();
@@ -825,24 +788,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var mangarayi = L.circle([-14.67, 133.5], {
-		color: 'red',
-		fillColor: 'red',
-		radius: 100000
-	}).addTo(map);
-	mangarayi.bindPopup('mangarayi'.capitalize());
-	mangarayi.on('mouseover', function (e) {
-		this.openPopup();
-	});
-	mangarayi.on('mouseout', function (e) {
-		this.closePopup();
-	});
-
 	var maori = L.circle([-40, 176], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	maori.bindPopup('maori'.capitalize());
 	maori.on('mouseover', function (e) {
 		this.openPopup();
@@ -852,10 +802,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var mapudungan = L.circle([-38, -72], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	mapudungan.bindPopup('mapudungan'.capitalize());
 	mapudungan.on('mouseover', function (e) {
 		this.openPopup();
@@ -865,10 +815,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var marghi = L.circle([11, 13], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	marghi.bindPopup('marghi'.capitalize());
 	marghi.on('mouseover', function (e) {
 		this.openPopup();
@@ -877,24 +827,24 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var martunthunira = L.circle([-20.83, 116.5], {
-		color: 'red',
-		fillColor: 'red',
+	var martuthunira = L.circle([-20.83, 116.50], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-	martunthunira.bindPopup('martunthunira'.capitalize());
-	martunthunira.on('mouseover', function (e) {
+	}).addTo(map2);
+	martuthunira.bindPopup('martuthunira'.capitalize());
+	martuthunira.on('mouseover', function (e) {
 		this.openPopup();
 	});
-	martunthunira.on('mouseout', function (e) {
+	martuthunira.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
 	var maybrat = L.circle([-1.33, 132.5], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	maybrat.bindPopup('maybrat'.capitalize());
 	maybrat.on('mouseover', function (e) {
 		this.openPopup();
@@ -904,10 +854,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var mina = L.circle([10.33, 13.83], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	mina.bindPopup('mina'.capitalize());
 	mina.on('mouseover', function (e) {
 		this.openPopup();
@@ -917,10 +867,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var mlabri = L.circle([18.5, 101], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	mlabri.bindPopup('mlabri'.capitalize());
 	mlabri.on('mouseover', function (e) {
 		this.openPopup();
@@ -930,10 +880,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var mokilese = L.circle([6.67, 159.75], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	mokilese.bindPopup('mokilese'.capitalize());
 	mokilese.on('mouseover', function (e) {
 		this.openPopup();
@@ -942,24 +892,24 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var ao = L.circle([26.58, 94.67], {
-		color: 'red',
-		fillColor: 'red',
+	var mongsen = L.circle([26.58, 94.67], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-	ao.bindPopup('ao'.capitalize());
-	ao.on('mouseover', function (e) {
+	}).addTo(map2);
+	mongsen.bindPopup('mongsen Ao'.capitalize());
+	mongsen.on('mouseover', function (e) {
 		this.openPopup();
 	});
-	ao.on('mouseout', function (e) {
+	mongsen.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
 	var navajo = L.circle([36.17, -108], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	navajo.bindPopup('navajo'.capitalize());
 	navajo.on('mouseover', function (e) {
 		this.openPopup();
@@ -968,11 +918,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var ngandi = L.circle([-13.83, 135.00], {
-		color: 'red',
-		fillColor: 'red',
+	var ngandi = L.circle([-13.83, 135], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	ngandi.bindPopup('ngandi'.capitalize());
 	ngandi.on('mouseover', function (e) {
 		this.openPopup();
@@ -982,10 +932,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var ngarla = L.circle([-20, 119], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	ngarla.bindPopup('ngarla'.capitalize());
 	ngarla.on('mouseover', function (e) {
 		this.openPopup();
@@ -995,10 +945,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var nyamal = L.circle([-21, 119], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	nyamal.bindPopup('nyamal'.capitalize());
 	nyamal.on('mouseover', function (e) {
 		this.openPopup();
@@ -1008,10 +958,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var nyigina = L.circle([-18, 124.33], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	nyigina.bindPopup('nyigina'.capitalize());
 	nyigina.on('mouseover', function (e) {
 		this.openPopup();
@@ -1021,10 +971,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var nyulnyul = L.circle([-17, 122.83], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	nyulnyul.bindPopup('nyulnyul'.capitalize());
 	nyulnyul.on('mouseover', function (e) {
 		this.openPopup();
@@ -1033,11 +983,24 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var paamese = L.circle([-16.5, 168.25], {
-		color: 'red',
-		fillColor: 'red',
+	var nywaygi = L.circle([-19, 146.17], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
+	nywaygi.bindPopup('nywaygi'.capitalize());
+	nywaygi.on('mouseover', function (e) {
+		this.openPopup();
+	});
+	nywaygi.on('mouseout', function (e) {
+		this.closePopup();
+	});
+
+	var paamese = L.circle([-16.5, 168.25], {
+		color: 'blue',
+		fillColor: 'blue',
+		radius: 100000
+	}).addTo(map2);
 	paamese.bindPopup('paamese'.capitalize());
 	paamese.on('mouseover', function (e) {
 		this.openPopup();
@@ -1047,10 +1010,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var pech = L.circle([15, -85.5], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	pech.bindPopup('pech'.capitalize());
 	pech.on('mouseover', function (e) {
 		this.openPopup();
@@ -1060,10 +1023,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var pileni = L.circle([-10.22, 166.22], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	pileni.bindPopup('pileni'.capitalize());
 	pileni.on('mouseover', function (e) {
 		this.openPopup();
@@ -1073,11 +1036,11 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var pitta = L.circle([-22.83, 140], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-	pitta.bindPopup('Pitta Pitta'.capitalize());
+	}).addTo(map2);
+	pitta.bindPopup('pitta-Pitta'.capitalize());
 	pitta.on('mouseover', function (e) {
 		this.openPopup();
 	});
@@ -1086,10 +1049,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var qiang = L.circle([32, 102.67], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	qiang.bindPopup('qiang (northern)'.capitalize());
 	qiang.on('mouseover', function (e) {
 		this.openPopup();
@@ -1099,11 +1062,11 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var rapanui = L.circle([-27.12, -109.37], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
-	rapanui.bindPopup('rapanui'.capitalize());
+	}).addTo(map2);
+	rapanui.bindPopup('rapa nui'.capitalize());
 	rapanui.on('mouseover', function (e) {
 		this.openPopup();
 	});
@@ -1111,11 +1074,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var rotuman = L.circle([-12.50, 177.07], {
-		color: 'red',
-		fillColor: 'red',
+	var rotuman = L.circle([-12.5, 177.07], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	rotuman.bindPopup('rotuman'.capitalize());
 	rotuman.on('mouseover', function (e) {
 		this.openPopup();
@@ -1125,10 +1088,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var samoan = L.circle([-13.92, -171.83], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	samoan.bindPopup('samoan'.capitalize());
 	samoan.on('mouseover', function (e) {
 		this.openPopup();
@@ -1138,10 +1101,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var santali = L.circle([24.5, 87], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	santali.bindPopup('santali'.capitalize());
 	santali.on('mouseover', function (e) {
 		this.openPopup();
@@ -1151,10 +1114,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var sanuma = L.circle([4.5, -64.67], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	sanuma.bindPopup('sanumá'.capitalize());
 	sanuma.on('mouseover', function (e) {
 		this.openPopup();
@@ -1163,11 +1126,11 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var savosavo = L.circle([-9.13, 159.8], {
-		color: 'red',
-		fillColor: 'red',
+	var savosavo = L.circle([-9.13, 159.80], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	savosavo.bindPopup('savosavo'.capitalize());
 	savosavo.on('mouseover', function (e) {
 		this.openPopup();
@@ -1177,10 +1140,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var semelai = L.circle([3, 103], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	semelai.bindPopup('semelai'.capitalize());
 	semelai.on('mouseover', function (e) {
 		this.openPopup();
@@ -1190,10 +1153,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var sinaugoro = L.circle([-9.83, 147.83], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	sinaugoro.bindPopup('sinaugoro'.capitalize());
 	sinaugoro.on('mouseover', function (e) {
 		this.openPopup();
@@ -1203,10 +1166,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var sursurunga = L.circle([-4, 152.77], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	sursurunga.bindPopup('sursurunga'.capitalize());
 	sursurunga.on('mouseover', function (e) {
 		this.openPopup();
@@ -1216,10 +1179,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var tamashek = L.circle([20, -2], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	tamashek.bindPopup('tamashek'.capitalize());
 	tamashek.on('mouseover', function (e) {
 		this.openPopup();
@@ -1229,10 +1192,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var tangga = L.circle([-3.47, 153.2], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	tangga.bindPopup('tangga'.capitalize());
 	tangga.on('mouseover', function (e) {
 		this.openPopup();
@@ -1242,10 +1205,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var thai = L.circle([16, 101], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	thai.bindPopup('thai'.capitalize());
 	thai.on('mouseover', function (e) {
 		this.openPopup();
@@ -1255,10 +1218,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var tokelauan = L.circle([-9, -172], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	tokelauan.bindPopup('tokelauan'.capitalize());
 	tokelauan.on('mouseover', function (e) {
 		this.openPopup();
@@ -1268,10 +1231,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var toqabaqita = L.circle([-8.42, 160.58], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	toqabaqita.bindPopup('toqabaqita'.capitalize());
 	toqabaqita.on('mouseover', function (e) {
 		this.openPopup();
@@ -1281,10 +1244,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var tuvaluan = L.circle([-8.5, 179.17], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	tuvaluan.bindPopup('tuvaluan'.capitalize());
 	tuvaluan.on('mouseover', function (e) {
 		this.openPopup();
@@ -1294,10 +1257,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var urarina = L.circle([-4.5, -75.5], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	urarina.bindPopup('urarina'.capitalize());
 	urarina.on('mouseover', function (e) {
 		this.openPopup();
@@ -1306,11 +1269,24 @@ mohawk.on('mouseout', function (e) {
 		this.closePopup();
 	});
 
-	var wambaya = L.circle([-18.67, 135.75], {
-		color: 'red',
-		fillColor: 'red',
+	var wajarri = L.circle([-26, 117.5], {
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
+	wajarri.bindPopup('wajarri'.capitalize());
+	wajarri.on('mouseover', function (e) {
+		this.openPopup();
+	});
+	wajarri.on('mouseout', function (e) {
+		this.closePopup();
+	});
+
+	var wambaya = L.circle([-18.67, 135.75], {
+		color: 'blue',
+		fillColor: 'blue',
+		radius: 100000
+	}).addTo(map2);
 	wambaya.bindPopup('wambaya'.capitalize());
 	wambaya.on('mouseover', function (e) {
 		this.openPopup();
@@ -1320,10 +1296,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var warembori = L.circle([-1.67, 137.58], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	warembori.bindPopup('warembori'.capitalize());
 	warembori.on('mouseover', function (e) {
 		this.openPopup();
@@ -1333,10 +1309,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var warrwa = L.circle([-17.5, 123.5], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	warrwa.bindPopup('warrwa'.capitalize());
 	warrwa.on('mouseover', function (e) {
 		this.openPopup();
@@ -1346,10 +1322,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var greenlandic = L.circle([64, -51], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	greenlandic.bindPopup('West Greenlandic'.capitalize());
 	greenlandic.on('mouseover', function (e) {
 		this.openPopup();
@@ -1359,10 +1335,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var yagua = L.circle([-3.5, -72], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	yagua.bindPopup('yagua'.capitalize());
 	yagua.on('mouseover', function (e) {
 		this.openPopup();
@@ -1372,10 +1348,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var yanyuwa = L.circle([-16.42, 137.17], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	yanyuwa.bindPopup('yanyuwa'.capitalize());
 	yanyuwa.on('mouseover', function (e) {
 		this.openPopup();
@@ -1385,10 +1361,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var yawuru = L.circle([-18, 122.5], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	yawuru.bindPopup('yawuru'.capitalize());
 	yawuru.on('mouseover', function (e) {
 		this.openPopup();
@@ -1398,10 +1374,10 @@ mohawk.on('mouseout', function (e) {
 	});
 
 	var yimas = L.circle([-4.67, 143.55], {
-		color: 'red',
-		fillColor: 'red',
+		color: 'blue',
+		fillColor: 'blue',
 		radius: 100000
-	}).addTo(map);
+	}).addTo(map2);
 	yimas.bindPopup('yimas'.capitalize());
 	yimas.on('mouseover', function (e) {
 		this.openPopup();
@@ -1409,7 +1385,5 @@ mohawk.on('mouseout', function (e) {
 	yimas.on('mouseout', function (e) {
 		this.closePopup();
 	});
-
-	
 }
 
