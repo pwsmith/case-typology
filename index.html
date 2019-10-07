@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Slide decks of Peter W. Smith</title>
-  </head>
-  <body>
-  
-    <h1>Talks</h1>
-    <ul>
-        <li><a href="quandt_brussels.html">(Non)-Petterns of Suppletion: what they tell us about language.</a></li>
-    </ul>
-    
 
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>The Typology of Case Assignment</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+  <h1>The Typology of Case Assignment</h1>
+  <h2>Peter W. Smith</h2>
+  <h2>WiSe 2019-2020, Goethe-Universität Frankfurt</h2>
+
+  <div class="outside">
+ <div class='mermaid'>
+    graph TD
+    classDef empty fill:#ffffff,stroke-width:0px;
+    A((case)) --- B
+    B(unmarked) --- D[nominative]
+    B --- F(dependent)
+    B --- E[absolutive]
+    F --- G[accusative]
+    F --- H(oblique)
+    F --- I[ergative]
+    H --- J[Dative]
+    H --- K[Locative]
+    H --- L[Instrumental]
+    class A,C,D,E,G,I,J,K,L empty;
+  </div>
+</div>
+
+
+
+  <h3>Overview</h3>
+  <p>For this seminar will look at the different types of case systems that are typologically attested in the world's
+    languages, and see how different theories of case fare when accounting for them.</p>
+
+<h3>Slides</h3>
+
+<ul>
+  <li><a href="wk1_intro.html">Class 1: Introduction</a></li>
+</ul>
+
+  <script src='js/mermaid.js'></script>
+  <script>
+    mermaid.initialize({
+      theme: 'neutral',
+      logLevel: 3,
+      flowchart: { curve: 'basis' },
+    });
+  </script>
+</body>
+
 </html>
