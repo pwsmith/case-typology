@@ -148,7 +148,483 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
     </div>
 </div>
 </section>
+
+<section>
+<h2>Positions for case</h2>
+<div class='center-image'>
+    <div>
+        <object style='width: 90%;' data='images/wk2_genitive_position.svg' type='image/svg+xml'></object>
+    </div>
+</div>
 </section>
+
+<section>
+<h2>Advantages</h2>
+<ul>
+    <li>Good predictive power for majority of English and German (and many others).</li>
+    <li>Case assigned to position: whatever is in Spec,TP = <span class='emphasisgreen'>nominative</span></li>
+</ul>
+<p class='ex'><span class='emphasisgreen'>They</span> (the mice) were chased by the owl.</p>
+<p class='ex'>The doctor is <span class='emphasisgreen'>me</span>.</p>
+</section>
+
+<section>
+<h2>Double Objects</h2>
+<ul>
+    <li>Prediction: if an element moves, the expected case is not available.</li>
+</ul>
+<p class='ex'>I gave a book <span class='emphasisgreen'>to him</span>.</p>
+<p class='ex'>*I gave a book <span class='emphasisgreen'>him</span>.</p>
+<p class='ex'>I gave <span class='emphasisgreen'>him</span> a book.</p>
+<p class='ex'>*I gave <span class='emphasisgreen'>to him</span> a book.</p>
+</section>
+
+<section>
+<h2>But...</h2>
+<ul>
+    <li>Sometimes the wrong case shows up unexpectedly, as above.</li>
+    <li>Thus, we need a way of handling these.</li>
+    <li>Idea: some case can be <span class='emphasismagenta'>inherent</span>.</li>
+    <li>This is effectively what <a class='citation' href='https://link.springer.com/article/10.1007/BF00133285'>Zaenen, Maling and Thráinsson</a> propose.</li>
+</ul>
+</section>
+</section>
+
+<section>
+<section class='title-slide slide level1'>
+<h1>Icelandic: Basic Facts</h1>
+</section>
+
+<section>
+<h2>Morphology</h2>
+<ul>
+    <li>Rich case distinctions.</li>
+</ul>
+<table>
+    <caption>Icleandic singular pronouns</caption>
+    <thead>
+        <th></th>
+        <th>Masculine</th>
+        <th>Feminine</th>
+        <th>Neuter</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class='sc'>nom</span></td>
+            <td>hann</td>
+            <td>hún</td>
+            <td>það</td>
+        </tr>
+        <tr>
+            <td><span class='sc'>acc</span></td>
+<td>hann</td>
+<td>hana</td>
+            <td>það</td>
+        </tr>
+        <tr>
+            <td><span class='sc'>dat</span></td>
+<td>honum</td>
+<td>henni</td>
+<td>því</td>
+        </tr>
+        <tr>
+<td><span class='sc'>gen</span></td>
+<td>hans</td>
+<td>hennar</td>
+<td>þess</td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+<section>
+<h2>Syntax</h2>
+<ul>
+    <li>It is in general an SVO language.</li>
+</ul>
+<div class='gloss-outer-container'>
+<div class='gloss-number-counter'><p class='ex'></p></div>
+<div class='gloss_example'>
+    <ol class='sentence'>
+        <li>
+            <ol class='word'>
+                <li lang=target>Ég</li>
+                <li lang=en_MORPH>I</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>hafði</li>
+                <li lang=en_MORPH>had</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>séð</li>
+                <li lang=en_MORPH>seen</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>hana</li>
+                <li lang=en_MORPH>her<span class='sc'>.acc</span></li>
+            </ol>
+        </li>
+    </ol>
+
+<p class='translation'>'I had seen her.'</p>
+</div>
+</div>
+<ul>
+        <li>Like various other Germanic languages, it shows V2.</li>
+    </ul>
+</section>
+
+<section>
+<h2>V2</h2>
+
+<div class='gloss-outer-container'>
+<div class='gloss-number-counter'><p class='ex'></p></div>
+<div class='gloss_example'>
+    <ol class='sentence'>
+        <li>
+            <ol class='word'>
+                <li lang=target>Ólafur</li>
+                <li lang=en_MORPH>Olaf<span class='sc'>.nom</span></li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target><span class='emphasisgreen'>fann</span></li>
+                <li lang=en_MORPH>found</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>peysuna</li>
+                <li lang=en_MORPH>sweater<span class='sc'>.acc</span></li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>sína</li>
+                <li lang=en_MORPH>his<span class='sc'>.refl</span></li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>í</li>
+                <li lang=en_MORPH>in</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>skúffunni</li>
+                <li lang=en_MORPH>the.drawer<span class='sc'>.dat</span></li>
+            </ol>
+        </li>
+    </ol>
+
+<p class='translation'>'Olaf found his sweater in the drawer.'</p>
+</div>
+</div>
+<p class='ex'>Peysuna sína <span class='emphasisgreen'>fann</span> Ólafur í skúffunni</p>
+<p class='ex'>*Peysuna sína Ólafur <span class='emphasisgreen'>fann</span> í skúffunni.</p>
+<p class='ex'>Í skúffunni <span class='emphasisgreen'>fann</span> Ólafur peysuna sína</p>
+</section>
+
+<section>
+<h2>Curious Cases</h2>
+<ul>
+    <li>Sometimes the subject is not nominative.</li>
+</ul>
+<div class='gloss-outer-container'>
+<div class='gloss-number-counter'><p class='ex'></p></div>
+<div class='gloss_example'>
+    <ol class='sentence'>
+        <li>
+            <ol class='word'>
+                <li lang=target>Henni</li>
+                <li lang=en_MORPH>her<span class='sc'>.dat</span></li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>hefur</li>
+                <li lang=en_MORPH>has</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>alltaf</li>
+                <li lang=en_MORPH>always</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>þótt</li>
+                <li lang=en_MORPH>thought</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>Ólafur</li>
+                <li lang=en_MORPH>Olaf<span class='sc'>.nom</span></li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>leiðinlegur</li>
+                <li lang=en_MORPH>boring<span class='sc'>.nom</span></li>
+            </ol>
+        </li>
+    </ol>
+
+<p class='translation'>'She has always found Olaf boring.'</p>
+</div>
+</div>
+<ul>
+    <li>And the case of the object can change too.</li>
+</ul>
+</section>
+
+<section>
+<h2>Inherent object case</h2>
+<div class='gloss-outer-container'>
+<div class='gloss-number-counter'><p class='ex'></p></div>
+<div class='gloss_example'>
+    <ol class='sentence'>
+        <li>
+            <ol class='word'>
+                <li lang=target>Ég</li>
+                <li lang=en_MORPH>I</li>
+            </ol>
+        </li>
+        <!-- <li>
+            <ol class='word'>
+                <li lang=target>var</li>
+                <li lang=en_MORPH>was</li>
+            </ol>
+        </li> -->
+        <li>
+            <ol class='word'>
+                <li lang=target>hjálpaði</li>
+                <li lang=en_MORPH>helped</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>honum</li>
+                <li lang=en_MORPH>him<span class='sc emphasisgreen'>.dat</span></li>
+            </ol>
+        </li>
+    </ol>
+
+<p class='translation'>'I helped him.'</p>
+</div>
+</div>
+<div class='gloss-outer-container'>
+<div class='gloss-number-counter'><p class='ex'></p></div>
+<div class='gloss_example'>
+    <ol class='sentence'>
+        <li>
+            <ol class='word'>
+                <li lang=target>Ég</li>
+                <li lang=en_MORPH>I</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>mun</li>
+                <li lang=en_MORPH>will</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>sakna</li>
+                <li lang=en_MORPH>miss</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>hans</li>
+                <li lang=en_MORPH>him<span class='sc emphasisgreen'>.gen</span></li>
+            </ol>
+        </li>
+    </ol>
+
+<p class='translation'>'I will miss him.'</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Case retention in passive</h2>
+<ul>
+    <li>Note that these cases are retained in passives.</li>
+</ul>
+<div class='gloss-outer-container'>
+<div class='gloss-number-counter'><p class='ex'></p></div>
+<div class='gloss_example'>
+    <ol class='sentence'>
+        <li>
+            <ol class='word'>
+                <li lang=target>þeim</li>
+                <li lang=en_MORPH>they<span class='sc emphasisgreen'>.dat</span></li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>var</li>
+                <li lang=en_MORPH>was</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>hjalpað</li>
+                <li lang=en_MORPH>helped</li>
+            </ol>
+        </li>
+    </ol>
+
+<p class='translation'>'They were helped.'</p>
+</div>
+</div>
+<div class='gloss-outer-container'>
+<div class='gloss-number-counter'><p class='ex'></p></div>
+<div class='gloss_example'>
+    <ol class='sentence'>
+        <li>
+            <ol class='word'>
+                <li lang=target>Hennar</li>
+                <li lang=en_MORPH>her<span class='sc emphasisgreen'>.gen</span></li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>var</li>
+                <li lang=en_MORPH>was</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>saknað</li>
+                <li lang=en_MORPH>missed</li>
+            </ol>
+        </li>
+    </ol>
+
+<p class='translation'>'She was missed.'</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Question</h2>
+<ul>
+    <li><span class='boldface'>If nominative is assigned to Spec,TP, why are dative and genitive retained under passivisation?</span></li>
+    <li>Two options:</li>
+    <ol>
+        <li>The objects are <span class='emphasismagenta'>topics</span>, not subjects, and so not in Spec,TP.<br><span class='emphasisorange fragment'>⇒ the above no longer an issue.</span></li>
+        <li>They are genuine subjects and <span class='boldface'>do</span> lie in Spec,TP.<br><span class='emphasisorange fragment'>⇒ the above is a genuine issue.</span></li>
+    </ol>
+</ul>
+</section>
+</section>
+<section>
+<section class='title-slide slide level1'>
+<h1>Subjecthood in Icelandic</h1>
+</section>
+
+<section>
+<h2>Raising</h2>
+<div class='gloss-outer-container'>
+<div class='gloss-number-counter'><p class='ex'></p></div>
+<div class='gloss_example'>
+    <ol class='sentence'>
+        <li>
+            <ol class='word'>
+                <li lang=target>Guðrún</li>
+                <li lang=en_MORPH>Gudrun<span class='sc'>.nom</span></li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>saknar</li>
+                <li lang=en_MORPH>misses</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>Haraldar</li>
+                <li lang=en_MORPH>Harold<span class='sc'>.gen</span></li>
+            </ol>
+        </li>
+    </ol>
+
+<p class='translation'>'Gudrun misses Harold.'</p>
+</div>
+</div>
+<div class='gloss-outer-container'>
+<div class='gloss-number-counter'><p class='ex'></p></div>
+<div class='gloss_example'>
+    <ol class='sentence'>
+        <li>
+            <ol class='word'>
+                <li lang=target>Ég</li>
+                <li lang=en_MORPH>I</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>taldi</li>
+                <li lang=en_MORPH>believed</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>Guðrúnnu</li>
+                <li lang=en_MORPH>Gudrun<span class='sc'>.acc</span></li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>í</li>
+                <li lang=en_MORPH>in</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>barnaskap</li>
+                <li lang=en_MORPH>foolishness</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>mínum</li>
+                <li lang=en_MORPH>my</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>sakna</li>
+                <li lang=en_MORPH>to-miss</li>
+            </ol>
+        </li>
+        <li>
+            <ol class='word'>
+                <li lang=target>Haraldar</li>
+                <li lang=en_MORPH>Harold<span class='sc'>.gen</span></li>
+            </ol>
+        </li>
+    </ol>
+
+<p class='translation'>'In my foolishness I believed Gudrun to miss Harold.'</p>
+</div>
+</div>
+</section>
+</section>
+
 
 <script src='js/reveal.js'></script>
 <script>

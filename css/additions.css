@@ -235,6 +235,15 @@ span.emphasisgreen {
   color: #039f64;
 }
 
+span.emphasismagenta {
+  color: #9e039f;
+}
+
+span.emphasisorange {
+  color: #cc7810;
+}
+
+
 .center-image {
   display: flex;
   align-items: center;
@@ -272,7 +281,7 @@ span.emphasisgreen {
    overflow:auto;
    /* margin-top: -1.5em; */
    width: 90%;
-      /* margin: 1em 0; */
+         /* margin: 1em 0; */
   }
   
   .reveal ol.sentence {
@@ -299,7 +308,7 @@ span.emphasisgreen {
   ol.word {
    /* padding: .5em; */
    margin-bottom: .5em;
-   background: white;
+   /* background: white; */
    float:left;
    /* border: 1px dotted #ccc; */
    display: inline-block;
@@ -315,5 +324,4 @@ span.emphasisgreen {
     margin-left: 1em;
   }
 
-  
   
