@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='author' content='Pete'>
+    <title>Structural vs. Inherent Case</title>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui'>
+    <link rel='stylesheet' href='css/reset.css'>
+    <link rel='stylesheet' href='css/reveal.css'>
+    <link rel='stylesheet' type='text/css' href='js/leaflet/leaflet.css' />
+    <script type='text/javascript' src='js/leaflet/leaflet.js'></script>
+    <script type='text/javascript' src='js/leaflet/leafletembed.js'></script>
+    <script type='text/javascript' src='js/leaflet/numbermap.js'></script>
+    <link rel='stylesheet' href='css/theme/sof.css' id='theme'>
+    <link rel="stylesheet" href="css/fullscreen-img.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+<script src='reveal.js/lib/js/html5shiv.js'></script>
+<![endif]-->
+    <link rel='stylesheet' href='css/additions.css'>
+</head>
+
+<body>
+    <div class='reveal'>
+        <div class='slides'>
+            <section class='front' id='title-slide'>
+                <div class='front_container'>
+                    <div class='front_info'>
+                        <h1 class='title'>Structural vs. Inherent Case</h1>
+                        <p class='subtitle'>Part II</p>
+                        <p class='author'>Peter W. Smith</p>
+                        <p class='date'>1st November 2019</p>
+                    </div>
+                    <div class='front_logo'>
+                        <img class='logo' src='GU-Logo-schwarz.png'>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <section class='title-slide slide level1'>
+                    <h1>Recap</h1>
+                </section>
+
+                <section>
+                    <h2>From last week</h2>
+                    <ul>
+                        <li>Nominative case not inexplicably linekd to subjects in Icelandic.</li>
+                        <li>Therefore, Spec,TP does not exactly correlate with nominative.</li>
+                        <li>Passive <span class='boldface'>cannot</span> be understood in Icelandic as a loss of case
+                            forcing movement to Spec,TP.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Open questions</h2>
+                    <ul>
+                        <li>What does this mean for the configurational case view?</li>
+                        <li>Can we maintain the proposal that case is assigned to Spec,TP?</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section class='title-slide slide level1'>
+                    <h1>Three types of case</h1>
+                </section>
+
+                <section>
+                    <h2>Proposal</h2>
+                    <ul>
+                        <li>The central theoretical claim is that case comes in three types:</li>
+                        <ul>
+                            <li>Semantic case</li>
+                            <li>Lexical/Idiosyncractic case</li>
+                            <li>Functional case</li>
+                        </ul>
+                        <li>These are in competition with each other.</li>
+                    </ul>
+                </section>
+            </section>
+
+
+            <section>
+                <section class='title-slide slide level1'>
+                    <h1>Semantic Case</h1>
+                </section>
+                <section>
+                    <h2>Semantic Case</h2>
+                    <ul>
+                        <li>Not discussed much.</li>
+                        <li>Semantic case is assigned to semantically restricted functions.</li>
+                    </ul>
+                    <div class='gloss-outer-container'>
+                        <div class='gloss-number-counter'>
+                            <p class='ex'></p>
+                        </div>
+                        <div class='gloss_example'>
+                            <ol class='sentence'>
+                                <li>
+                                    <ol class='word'>
+                                        <li lang=target>Strákurinn</li>
+                                        <li lang=en_MORPH>the-boy</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <ol class='word'>
+                                        <li lang=target>beið</li>
+                                        <li lang=en_MORPH>waited</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <ol class='word'>
+                                        <li lang=target><span class='emphasisgreen'>allan</span></li>
+                                        <li lang=en_MORPH><span class="sc">all.acc</span></li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <ol class='word'>
+                                        <li lang=target><span class='emphasisgreen'>daginn</span></li>
+                                        <li lang=en_MORPH><span class="sc">day.acc</span></li>
+                                    </ol>
+                                </li>
+                            </ol>
+
+                            <p class='translation'>'The boy waited all day.'</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section class='title-slide slide level1'>
+                    <h1>Idiosyncratic case vs. Functional case</h1>
+                </section>
+
+                <section>
+                    <h2>Idiosyncratic case</h2>
+                    <ul>
+                        <li>"Associated with a particular thematic role."</li>
+                        <li>"This type of case is assigned before thematic roles are associated with grammatical
+                            functions."</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Functional case</h2>
+                    <ul>
+                        <li>"What is widely referred to as regular or default case [...] sensitive to surface
+                            relations."</li>
+                        <li>There is a default system of case assignment that comes <span class='italic'>after</span>
+                            other types of case assignment have already happened.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Order</h2>
+                    <div class='center-image'>
+                        <div>
+                            <object style='width: 90%;' data='images/wk3_case_order.svg' type='image/svg+xml'></object>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section>
+                    <h2>Verb Categorisations</h2>
+                    <table>
+                        <thead>
+                            <th>Verb</th>
+                            <th>Gloss</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>dansa</td>
+                                <td>'to dance'</td>
+                                <td>
+                                    <<span class='sc'>agent</span>>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>lesa</td>
+                                <td>'read'</td>
+                                <td>
+                                    <<span class='sc'>agent,</span>
+                                </td>
+                                <td><span class='sc'>theme</span>></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>fækka</td>
+                                <td>'decrease'</td>
+                                <td>
+                                    <<span class='sc'>agent,</span>
+                                </td>
+                                <td><span class='sc'>theme</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>gæta</td>
+                                <td>'take care of'</td>
+                                <td>
+                                    <<span class='sc'>agent</span>,
+                                </td>
+                                <td><span class='sc'>theme</span><sub>Gen</sub>></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>lofa</td>
+                                <td>'promise'</td>
+                                <td>
+                                    <<span class='sc'>agent</span>,
+                                </td>
+                                <td><span class='sc'>theme</span><sub>Dat</sub>,</td>
+                                <td><span class='sc'>goal</span><sub>Dat</sub>></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                
+                <section>
+                <h2>Association Principles</h2>
+                <ul>
+                    <li>Linking of θ-roles:</li>
+                    <ul>
+                        <li>If there is only one: assign to <span class='sc'>subject</span></li>
+                        <li>If two: assign to <span class='sc'>subject</span> and <span class='sc'>object</span></li>
+                        <li>If three: assign to <span class='sc'>subject</span>, <span class='sc'>object</span> and <span class='sc'>2object</span>.</li>
+                    </ul>
+                    <li><span class=''>Agents</span> are linked to <span class='sc'>subject</span></li>
+                    <li><span class='boldface'>Default case marking</span>: the highest available GF is assigned nominative, the next highest accusative.</li>
+                </ul>
+                </section>
+
+<section>
+<h2>Default</h2>
+<div class='center-image'>
+    <div>
+        <object style='width: 90%;' data='images/wk3_default_case.svg' type='image/svg+xml'></object>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>Dative Object</h2>
+<div class='center-image'>
+    <div>
+        <object style='width: 90%;' data='images/wk3_dative_object.svg' type='image/svg+xml'></object>
+    </div>
+</div>
+</section>
+
+
+<section>
+<h2>Two Dative Objects</h2>
+<div class='center-image'>
+    <div>
+        <object style='width: 90%;' data='images/wk3_double_dative_object.svg' type='image/svg+xml'></object>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>Dative Subject</h2>
+<div class='center-image'>
+    <div>
+        <object style='width: 90%;' data='images/wk3_dative_subject.svg' type='image/svg+xml'></object>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>Genitive Subject</h2>
+<div class='center-image'>
+    <div>
+        <object style='width: 90%;' data='images/wk3_genitive_subject.svg' type='image/svg+xml'></object>
+    </div>
+</div>
+</section>
+            </section>
+
+
+            <script src='js/reveal.js'></script>
+            <script>
+                // Full list of configuration options available at:
+                // https://github.com/hakimel/reveal.js#configuration
+                Reveal.initialize({
+                    // Display the page number of the current slide
+                    slideNumber: true,
+                    // Push each slide change to the browser history
+                    history: true,
+                    // Vertical centering of slides
+                    center: false,
+                    transition: 'slide',
+                    // Transition speed
+                    transitionSpeed: 'slow', // default/fast/slow
+                    viewDistance: 200,
+                    menu: {
+                        openButton: true,
+                        themes:
+                            [
+                                { name: 'Sof', theme: 'css/theme/sof.css' },
+                                { name: 'Moon', theme: 'css/theme/moon.css' },
+                                { name: 'Blood', theme: 'css/theme/blood.css' },
+                                { name: 'Beige', theme: 'css/theme/beige.css' },
+                                { name: 'Night', theme: 'css/theme/night.css' },
+                                { name: 'League', theme: 'css/theme/league.css' },
+                                { name: 'Serif', theme: 'css/theme/serif.css' },
+                                { name: 'Solarized', theme: 'css/theme/solarized.css' },
+                                { name: 'White', theme: 'css/theme/white.css' },
+                                { name: 'Sky', theme: 'css/theme/sky.css' },
+                            ]
+                    },
+                    // Optional reveal.js plugins
+                    dependencies: [
+                        { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                        { src: 'plugin/zoom-js/zoom.js', async: true },
+                        { src: 'plugin/notes/notes.js', async: true },
+                        { src: 'plugin/reveal.js-menu/menu.js' },
+                        { src: 'plugin/inline-svg.js' },
+                        { src: 'lib/js/fullscreen-img.js' },
+                    ]
+                });
+            </script>
+            <script src='js/mermaid.js'></script>
+            <script>
+                mermaid.initialize({
+                    theme: 'forest',
+                    logLevel: 3,
+                    flowchart: { curve: 'basis' },
+                });
+            </script>
+</body>
+
+</html>
