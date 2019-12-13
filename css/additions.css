@@ -275,6 +275,13 @@ span.emphasisorange {
     margin-top: .8em;
   }
 
+.judgement {
+  margin-top: .8em;
+  text-align: right;
+  padding-left: 0.5em;
+  padding-right: -0.5em;
+}
+
   div.gloss_example {
     /* background: hsla(55, 99%, 80%, 50); */
     /* padding: 5px; */
