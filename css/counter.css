@@ -1,0 +1,18 @@
+body {
+    counter-reset: ex-counter 0;
+}
+
+section {
+    counter-reset: ab-counter 0;
+    /* counter-reset: ex-counter 0; */
+}
+
+.ab::before {
+    counter-increment: ab-counter;
+    content: "." counter(ab-counter, lower-latin) ".";
+  }
+
+.ex::before {
+    counter-increment: ex-counter;
+    content: "." counter(ex-counter, upper-roman) ".";
+}
