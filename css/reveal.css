@@ -136,7 +136,7 @@ body {
   color: #ff2c2d; }
 
 .reveal .slides section .fragment.highlight-green.visible {
-  color: #17ff2e; }
+  color: #00b898; }
 
 .reveal .slides section .fragment.highlight-blue.visible {
   color: #1b91ff; }
@@ -543,11 +543,6 @@ body {
 .reveal.center .slides,
 .reveal.center .slides section {
   min-height: 0 !important; }
-
-  .reveal.level1,
-  .reveal.level1 .slides,
-  .reveal.level1 .slides section {
-    min-height: 0 !important; }
 
 /* Don't allow interaction with invisible slides */
 .reveal .slides > section.future,

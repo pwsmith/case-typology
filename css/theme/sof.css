@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=Signika&display=swap');
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
-/* @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500i,700i&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500i,700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap');
 /*********************************************
  * GLOBAL STYLES
@@ -34,8 +34,8 @@ body {
 
 .reveal {
   /* font-family: "Linux Biolinum O", sans-serif; */
-  font-family: 'Open Sans', sans-serif;
-  font-size: 40px;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 35px;
   font-weight: normal;
   color: #000;
   text-align: left}
@@ -44,7 +44,7 @@ body {
   /* background-color: #09d0b7; */
   background-color: #f2cc72;
   /* #eeb70d; */
-    font-family: 'Signika', sans-serif;
+    /* font-family: 'Fira Code', sans-serif; */
 }
 
 span.italic {
@@ -95,7 +95,7 @@ align-self: flex-end;
   font-size:2.5em;
   font-weight: 700;
   padding-top: 1em;
-    font-family: 'Signika', sans-serif;
+    /* font-family: 'Signika', sans-serif; */
 }
 
 .reveal .front .front_info h2 {
@@ -105,7 +105,7 @@ align-self: flex-end;
 
 .reveal .front .front_info h3 {
   font-size:0.8em;
-    font-family: 'Signika', sans-serif;
+    /* font-family: 'Signika', sans-serif; */
 }
 
 .reveal .exe {
@@ -146,7 +146,7 @@ flex: none;
 }
 
   .reveal .center h2, .reveal .center h1{
-    font-family: 'Signika', sans-serif;
+    /* font-family: 'Signika', sans-serif; */
   }
 ::selection {
   color: #fff;
@@ -175,7 +175,7 @@ flex: none;
   margin: 0 0 20px 0;
   color: #000;
   /* font-family: "Linux Biolinum O", Impact, sans-serif; */
-  font-family: "Signika", sans-serif;
+  font-family: "Droid Sans", sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;

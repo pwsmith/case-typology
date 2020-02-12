@@ -84,7 +84,7 @@ body {
   }
   
   .reveal .level2 h2{
-    font-size:2em;
+    font-size:1.75em;
   }
   
   .reveal .front .front_info {
@@ -108,7 +108,7 @@ body {
   
   .reveal .front .front_info h3 {
     font-size:0.8em;
-      font-family: 'Signika', sans-serif;
+      /* font-family: 'Fira Code', sans-serif; */
   }
   
   .reveal .exe {
@@ -157,6 +157,13 @@ body {
 .container{
     display: flex;
   }
+
+  .containerbaseline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   
   .col {
     flex: 1;

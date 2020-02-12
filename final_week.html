@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='author' content='Pete'>
+    <title>Case Suppletion</title>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui'>
+    <link rel='stylesheet' href='css/reset.css'>
+    <link rel='stylesheet' href='css/reveal.css'>
+    <link rel='stylesheet' type='text/css' href='js/leaflet/leaflet.css' />
+    <script type='text/javascript' src='js/leaflet/leaflet.js'></script>
+    <script type='text/javascript' src='js/leaflet/leafletembed.js'></script>
+    <script type='text/javascript' src='js/leaflet/numbermap.js'></script>
+    <link rel='stylesheet' href='css/theme/sof.css' id='theme'>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+<script src='reveal.js/lib/js/html5shiv.js'></script>
+<![endif]-->
+    <link rel='stylesheet' href='css/additions.css'>
+    <link rel='stylesheet' href='css/linguistic-examples.css'>
+</head>
+
+<body>
+    <div class='reveal'>
+        <div class='slides'>
+            <section class='front' id='title-slide'>
+                <div class='front_container'>
+                    <div class='front_info'>
+                        <h1 class='title'>Case Suppletion</h1>
+                        <p class='subtitle'>Dependent case and containment</p>
+                        <p class='author'>Peter W. Smith</p>
+                        <p class='date'>14th February 2020</p>
+                    </div>
+                    <div class='front_logo'>
+                        <img class='logo' src='GU-Logo-schwarz.png'>
+                    </div>
+                </div>
+            </section>
+            <section class='title-slide slide level1'>
+            <h1>From last week</h1>
+            </section>
+            
+            <section>
+            <h2>Recap</h2>
+            <ul>
+                <li>Last week we looked at:</li>
+                <ul>
+                    <li>Morphology as a translation mechanism between syntax and phonology.</li>
+                    <li>The basics of Distributed Morphology</li>
+                    <li>Allomorphy and how it is analysed.</li>
+                </ul>
+            </ul>
+            </section>
+            
+            <section>
+            <h2>Takeaways</h2>
+            <ul>
+                <li><span class='sc'>Abstract Features</span> ⇔ /phonology/</li>
+                <li>A single feature (bundle) can have a more than one rule that applies.</li>
+                <li>In this case, use the most specific rule.</li>
+            </ul>
+            </section>
+            
+            <section>
+            <h2>Adjective suppletion</h2>
+            <ul>
+                <li>Restrictions on Adjective suppletion.</li>
+                <ul>
+                    <li>AAA: <span class='italic'>smart ~ smarter ~ smartest</span></li>
+                    <li>ABB: <span class='italic'>good ~ better ~ best</span></li>
+                    <li>ABC: <span class='italic'>bonus ~ melior ~ optimus</span></li>
+                    <li>*AAB: <span class='italic'>good ~ gooder ~ best</span></li>    
+                    <li>*ABA: <span class='italic'>good ~ better ~ goodest</span></li>
+                </ul>
+                <li>Derived the missing patterns through containment and VI.</li>
+            </ul>
+            </section>
+            
+            <section>
+            <h2>Short Version</h2>
+            <ul>
+                <li><span class='underline'>Containment Hypothesis</span><br>The superlative always contains the comparative.</li>
+            </ul>
+            </section>
+            
+            <section>
+            <h2>Evidence</h2>
+            <ul>
+                <li>Some languages transparently show this containment.</li>
+            </ul>
+            <table>
+                <thead>
+                    <th>Adjective</th>
+                    <th>Comp</th>
+                    <th>Sprl</th>
+                    <th>Lg.</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>mlad-ý</td>
+                        <td>mlad-<span class='boldface'>ši</span></td>
+                        <td>nej-mlad-<span class='boldface'>ši</span></td>
+                        <td>Czech</td>
+                    </tr>
+                    <tr>
+                        <td>nagy</td>
+                        <td>nagy-<span class='boldface'>obb</span></td>
+                        <td style="font-size: 0.8em;">leg-nagy-<span class='boldface'>obb</span></td>
+                        <td>Hungarian</td>
+                    </tr>
+                    <tr>
+                        <td>nüs°ə</td>
+                        <td><span class='boldface'>c̨ 'a</span>-nüs°-ə</td>
+                        <td>a-<span class='boldface'>c̨ 'a</span>-nüs°-ə</td>
+                        <td>Ubykh</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="fragment">
+                <li>There is also syntactic evidence:</li>
+                <li><span class='underline'>SSG</span><br>If a language has a morphological superlative, it also has a morphological comparative.</li>
+            </ul>
+
+            </section>
+            <section>
+                <h2>Adjektive</h2>
+                <div class='container'>
+                    <div class='col'>
+                        <ul class="fragment" data-fragment-index="0">
+                            <li>Structure of positive</li>
+                        </ul>
+                        <p class='whitespace'></p>
+                        <div class='center-image fragment' data-fragment-index="0">
+                            <div>
+                                <object style='width: 50%;' data='images/final_positive.png'></object>
+                            </div>
+                        </div>
+                        <p class='whitespace'></p>
+                        <ul class=" fragment" data-fragment-index="2">
+                            <li>Comparative:</li>
+                        </ul>
+                        <p class='whitespace'></p>
+                        <div class='center-image fragment' data-fragment-index="2">
+                            <div>
+                                <object style='width: 60%;' data='images/final_comp.png'></object>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <ul class=" fragment" data-fragment-index="3">
+                            <li>Superlative:</li>
+                        </ul>
+                        <p class='whitespace'></p>
+                        <div class='center-image fragment' data-fragment-index="3">
+                            <div>
+                                <object style='width: 70%;' data='images/final_sprl.png'></object>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Evidence #2</h2>
+                <ul>
+                    <li>Bobailjik gives the following:</li>
+                </ul>
+                <div class='example-container'>
+                    <div class='individual-example'>
+                        <div class='example-number'>
+                            <p class='ex'></p>
+                        </div>
+                        <div class='example-sentence'>
+                            <p><span class="underline">Synthetic Superlative Generalisation</span><br>No language has a morphological superlative but a synthetic comparative.</p>
+                        </div>
+                    </div>
+                </div>
+                <table class="fragment">
+                    <thead>
+                        <th>Positive</th>
+                        <th>Comparative</th>
+                        <th>Superlative</th>
+                        <th>Language</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                üvä
+                            </td>
+                            <td>parəpi</td>
+                            <td>kəikkia parəpi</td>
+                            <td>Votic</td>
+                        </tr>
+                        <tr>
+                            <td>polxoj</td>
+                            <td>xuže</td>
+                            <td>samyj ploxoj</td>
+                            <td>Russisch</td>
+                        </tr>
+                        <tr>
+                            <td>good</td>
+                            <td>more good</td>
+                            <td>*goodest</td>
+                            <td><span class='italic'>hypothetisch</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section>
+            <h2>*ABA</h2>
+            <ul>
+                <li>We then derive *ABA in the following way.</li>
+                <ul>
+                    <li>ABB requires a rule specific to comparatives.</li>
+                    <ul style="list-style-type: none;">
+                        <li>√<span class='sc'>good</span> ⇔ /bɛs/ <span style="font-size: 1.5em;">|</span> <span
+                                class='sc'>___ comp</span></li>
+                        <li>√<span class='sc'>good</span> ⇔ /gud/ <span class='italic'>elsewhere</span></li>
+                        <!-- <li>√<span class='sc'>grün</span> ⇔ /gru:n/</li> -->
+                    </ul>
+                    <li class="fragment" data-fragment-index="2">ABC requires a rule for comparatives and one for superlatives.</li>
+                    <ul style="list-style-type: none;" class="fragment" data-fragment-index="2">
+                        <li>√<span class='sc'>gut</span> ⇔ /optimus/ <span style="font-size: 1.5em;">|</span> <span
+                                class='sc'>___ comp ] supr ]</span></li>
+                        <li>√<span class='sc'>gut</span> ⇔ /mɛliɔ:/ <span style="font-size: 1.5em;">|</span> <span
+                                class='sc'>___ comp</span></li>
+                        <li>√<span class='sc'>gut</span> ⇔ /bonʊs/</li>
+                    </ul>
+                </ul>
+                <li class="fragment" data-fragment-index="3">No way to target comparative alone.</li>
+            </ul>
+            </section>
+            <section class='title-slide slide level1'>
+            <h1>Case Suppletion</h1>
+            </section>
+            <section>
+                <h2>Why?</h2>
+                <ul>
+                    <li>There is an equivalent to the SSG</li>
+                    <li><a class='citation'
+                            href='https://munin.uit.no/bitstream/handle/10037/2203/thesis.pdf?sequence=1'>Caha
+                            (2009)</a>
+                        showed:</li>
+                </ul>
+
+                <img src="images/wk9_case_pred.png" alt="">
+
+                <ul>
+                    <li>Higher cases are expressed by prepositions.</li>
+                </ul>
+
+            </section>
+            <section class="slide level2">
+                <h2><a class='citation' href='https://link.springer.com/article/10.1007/s11049-018-9425-0'>Smith et al (2019)</a>: Summary</h2>
+                <table>
+                    <!-- <caption></caption> -->
+                    <thead>
+                        <th>Pattern</th>
+                        <th><span class=italic>n </span>attested</th>
+                        <th>Example</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AAA</td>
+                            <td>numerous</td>
+                            <td>Lezgian</td>
+                        </tr>
+                        <tr>
+                            <td>ABB</td>
+                            <td>57</td>
+                            <td>Indo-European</td>
+                        </tr>
+                        <tr>
+                            <td>ABC</td>
+                            <td>2</td>
+                            <td>Khinalugh</td>
+                        </tr>
+                        <tr>
+                            <td>AAB</td>
+                            <td>10</td>
+                            <td>Hunzib</td>
+                        </tr>
+                        <tr>
+                            <td>ABA</td>
+                            <td>---</td>
+                            <td>---</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class='whitespace'></p>
+                <ul>
+                    <li>Pronoun systems in more than 160 languages investigated.</li>
+                </ul>
+
+
+            </section>
+            <section>
+                <div id="map"></div>
+                <!-- <h2>Map</h2> -->
+                <script>
+                    initmap();
+
+                </script>
+
+            </section>
+
+
+
+            <section class="slide level2">
+                <h2>AAA Muster</h2>
+                <table>
+                    <caption>AAA patterns in case suppletion</caption>
+                    <thead>
+                        <th>Kasus 1</th>
+                        <th>Kasus 2</th>
+                        <th>Kasus 3</th>
+                        <th>Sprache</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>izú</td>
+                            <td>izu</td>
+                            <td>izu-s</td>
+                            <td>Tabasaran</td>
+                        </tr>
+                        <tr>
+                            <td>čun</td>
+                            <td>čna</td>
+                            <td>čaz</td>
+                            <td>Lezgian</td>
+                        </tr>
+                        <tr>
+                            <td>tā</td>
+                            <td>taī-le</td>
+                            <td>tā-lāi</td>
+                            <td>Nepali</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+            <section>
+                <h2>ABB Muster</h2>
+                <table>
+                    <caption>ABB patterns in case suppletion<caption>
+                    <thead>
+                        <th>Kasus 1</th>
+                        <th>Kasus 2</th>
+                        <th>Kasus 3</th>
+                        <th>Language</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ol</td>
+                            <td>anɨ</td>
+                            <td>aɣaa</td>
+                            <td>Khakas</td>
+                        </tr>
+                        <tr>
+                            <td>mə</td>
+                            <td>dibi</td>
+                            <td>du-</td>
+                            <td>Hunzib</td>
+                        </tr>
+                        <tr>
+                            <td>àʔàŋ</td>
+                            <td>nkàtí</td>
+                            <td>kàtí</td>
+                            <td>Kadugli</td>
+                        </tr>
+                        <td>ʔa</td>
+                        <td>wit</td>
+                        <td>witib</td>
+                        <td>Pomo (SE)</td>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>ABC Muster</h2>
+                <table>
+                    <caption>ABC Mpatterns in case suppletion</caption>
+                    <thead>
+                        <th>Kasus 1</th>
+                        <th>Kasus 2</th>
+                        <th>Kasus 3</th>
+                        <th>Language</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ajo</td>
+                            <td>(a)të</td>
+                            <td>asaj</td>
+                            <td>Albanian</td>
+                        </tr>
+                        <tr>
+                            <td>zɨ</td>
+                            <td>jä</td>
+                            <td>as(ɨr)</td>
+                            <td>Khinalugh</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>AAB Patterns</h2>
+                <table>
+                    <caption>AAB patterns in case suppletion</caption>
+                    <thead>
+                        <th>Kasus 1</th>
+                        <th>Kasus 2</th>
+                        <th>Kasus 3</th>
+                        <th>Sprache</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>woʔ</td>
+                            <td>woʔot</td>
+                            <td>weyaʔik</td>
+                            <td>Yurok</td>
+                        </tr>
+                        <tr>
+                            <td>niyi</td>
+                            <td>niyi-ngga</td>
+                            <td>nhoowoo</td>
+                            <td>Gooniyandi</td>
+                        </tr>
+                        <tr>
+                            <td>narnaj</td>
+                            <td>narnaj-bulu-yi</td>
+                            <td>wurrugu</td>
+                            <td>Wardaman</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="slide level2">
+                <h2>Theory</h2>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <li>Like adjectives: higher cases contain lower ones</li>
+                            <li>e.g. Dative contains accustaive and nominative, accusative contains nominative</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <!-- <div class="mermaid">
+                            graph TD
+                            classDef empty fill:#ffffff,stroke-width:0px;
+                            A[DP] --- B[b]
+                            A --- C[Dative]
+                            B --- D[a]
+                            B --- E[Accusative]
+                            D --- F[Base]
+                            D --- G[Nominative]
+                            class A,B,C,D,E,F,G empty</div>
+                    </div> -->
+                    <div class='center-image'>
+                        <div>
+                            <object style='width: 90%;' data='images/wk11_case_cont.png'></object>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide level2">
+                <h2>Evidence</h2>
+                <ul>
+                    <li>Sometimes we see this case containment transparently</li>
+                    <li>The following comes from <a href="https://glottolog.org/resource/languoid/id/nort3264">Khanty</a> <a class='citation' href='https://books.google.de/books?id=7FMbAQAAIAAJ&source=gbs_ViewAPI&redir_esc=y'>(Nikolaeva 1999)</a></li>
+                </ul>
+                <!-- <p class="whitespace"></p> -->
+                <table>
+                    <caption>Khanty: <span class='sc'>dative</span> contains <span class='sc'>accusative</span></caption>
+                    <thead>
+                        <th></th>
+                        <th><span class="sc">Nominative</span></th>
+                        <th><span class="sc">Akkusative</span></th>
+                        <th><span class="sc">Dative</span></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="sc">1sg</span></td>
+                            <td>ma</td>
+                            <td>ma:-<span class="emphasisgreen">ne:m</span></td>
+                            <td>ma:-<span class="emphasisgreen">ne:m</span>-na</td>
+                        </tr>
+                        <tr>
+                            <td><span class="sc">3sg</span></td>
+                            <td>luw</td>
+                            <td>luw-<span class="emphasisgreen">e:l</span></td>
+                            <td>luw-<span class="emphasisgreen">e:l</span>-na</td>
+                        </tr>
+                        <tr>
+                            <td><span class="sc">1pl</span></td>
+                            <td>muŋ</td>
+                            <td>muŋ-<span class="emphasisgreen">e:w</span></td>
+                            <td>muŋ-<span class="emphasisgreen">e:w</span>-na</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <p class="whitespace"></p>
+                <ul>
+                    <li><span class="boldface">Caveat</span>: these are few and far between.</li>
+                </ul> -->
+            </section>
+
+            <section>
+                <h2>Containment: <a href="https://glottolog.org/resource/languoid/id/czec1258">Czech</a> <a class='citation' href='https://munin.uit.no/bitstream/handle/10037/2203/thesis.pdf?sequence=1'>(Caha 2009)</a></h2>
+               
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>'Mann'</th>
+                        <th>'Huhn'</th>
+                        <th>'Auge'</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nom</td>
+                            <td>muž-i</td>
+                            <td>kuřat-a</td>
+                            <td>oč-i</td>
+                        </tr>
+                        <tr>
+                            <td>Acc</td>
+                            <td>muž-<span class='emphasisgreen'>E</span></td>
+                            <td>kuřat-<span class='emphasisgreen'>A</span></td>
+                            <td>oč-<span class='emphasisgreen'>I</span></td>
+                        </tr>
+                        <tr>
+                            <td>Gen</td>
+                            <td>muž-ů</td>
+                            <td>kuřat</td>
+                            <td>oč-í</td>
+                        </tr>
+                        <tr>
+                            <td>Prep</td>
+                            <td>muž-í-ch</td>
+                            <td>kuřat-e-ch</td>
+                            <td>oč-i-ch</td>
+                        </tr>
+                        <tr>
+                            <td>Dat</td>
+                            <td>muž-ů-m</td>
+                            <td>kuřat-ů-m</td>
+                            <td>oč-i-m</td>
+                        </tr>
+                        <tr>
+                            <td>Ins</td>
+                            <td>muž-<span class='emphasisgreen'>E</span>-ma</td>
+                            <td>kuřat-<span class='emphasisgreen'>A</span>-ma</td>
+                            <td>oč-<span class='emphasisgreen'>I</span>-ma</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Containment</h2>
+                <ul>
+                    <li>Auch im <a href="https://glottolog.org/resource/languoid/id/tokh1243">West Tocharian</a> <a class='citation' href='https://www.glossa-journal.org/articles/10.5334/gjgl.821/'>(Bergsma 2019)</a>.
+                    </li>
+                </ul>
+                <p class='whitespace'></p>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>'Pferde'</th>
+                        <th>'Männer</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class='sc'>nom</span></td>
+                            <td>yakwi</td>
+                            <td>eṅkwi</td>
+                        </tr>
+                        <tr>
+                            <td><span class='sc'>acc</span></td>
+                            <td>yakwe-<span class='emphasisgreen'>ṃ</span></td>
+                            <td>eṅkwe-<span class='emphasisgreen'>ṃ</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class='sc'>gen/dat</span></td>
+                            <td>yäkwe-<span class='emphasisgreen'>ṃ</span>-ts</td>
+                            <td>eṅkwe-<span class='emphasisgreen'>ṃ</span>-ts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Discussion</h2>
+                <ul>
+                    <li>No ABA patterns in case.</li>
+                    <li>Clear restrictions on suppletion.</li>
+                    <li>This applies to both nominative–accusative and ergative–absolutive systems!</li>
+                    <li class="fragment" data-fragment-index="2">That is, there is no instance whereby ergative is suppletive, and the lexical cases not.</li>
+                    <div class='center-image fragment' data-fragment-index="3">
+                        <div>
+                            <object style='width: 90%;' data='images/final_zompi_ergpatterns.png'></object>
+                        </div>
+                    </div>
+                    <ul class="fragment" data-fragment-index="3">
+                        <li>From <a class='citation' href='https://www.glossa-journal.org/articles/10.5334/gjgl.816/'>Zompi 2019</a></li>
+                    </ul>
+                    <!-- <li><span class='boldface'>Important:</span> There is <span class='italic'>no</span> semantic
+                        justification for this.</li> -->
+                    <!-- <ul>
+                        <li>Remarkably few theories of case would attribute a semantics to case.</li>
+                    </ul> -->
+                </ul>
+            </section>
+            <section class='title-slide slide level1'>
+            <h1>Case Containment: Syncretism</h1>
+            </section>
+            
+            <section>
+            <h2>Syncretism</h2>
+            <ul>
+                <li><span class='emphasisgreen'>Syncretism</span> refers to two cells in a paradigm that share a form.</li>
+            </ul>
+            <table>
+                <caption>Syncretisms in German cases</caption>
+                <thead>
+                    <th></th>
+                    <th><span class='sc'>Masculine</span></th>
+                    <th>Feminine</th>
+                    <th>Neuter</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class='sc'>nom</span></td>
+                        <td><span class="emphasisgreen">der</span></td>
+                        <td><span style="color: #205b9f">die</span></td>
+                        <td><span style="color:darkred">das</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class='sc'>akk</span></td>
+                        <td><span>den</span></td>
+                        <td><span style="color: #205b9f">die</span></td>
+                        <td><span style="color:darkred">das</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class='sc'>dat</span></td>
+                        <td><span class="emphasismagenta">dem</span></td>
+                        <td><span class="emphasisgreen">der</span></td>
+                        <td><span class="emphasismagenta">dem</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class='sc'>gen</span></td>
+                        <td><span class="emphasisorange">des</span></td>
+                        <td><span class="emphasisgreen">der</span></td>
+                        <td><span class="emphasisorange">des</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            </section>
+            
+            <section>
+            <h2>Case Syncretisms</h2>
+            <ul>
+                <li><a class='citation' href='https://www.glossa-journal.org/articles/10.5334/gjgl.816/'>Zompí's</a> (2019) generalisation:</li>
+            </ul>
+            <div class='example-container'>
+            <div class='individual-example'>
+            <div class='example-number'><p class='ex'></p></div>
+            <div class='example-sentence'><p>A non-accidental syncretism cannot cover both the nominative/absolutive and an oblique case (other than the genitive) without also covering another core structural case (accusative or ergative).</p></div>
+            </div>
+            </div>
+            <ul class="fragment">
+                <li>That is: in syncretism *ABA holds.</li>
+            </ul>
+            </section>
+            
+            <section>
+            <h2>Syncretisms: Icelandic</h2>
+            <ul>
+                <li>Icelandic has <span class='sc'>nom/acc</span> and <span class='sc'>acc/dat</span> syncretisms.</li>
+            </ul>
+            <div class='center-image'>
+                <div>
+                    <object style='width: 110%;' data='images/final_icelandic_sync.png'></object>
+                </div>
+            </div>
+            </section>
+            
+            <section>
+            <h2>Sycretisms: Basque</h2>
+            <ul>
+                <li>Basque has <span class='sc'>abs/erg</span> syncretisms:</li>
+            </ul>
+            <div class='center-image'>
+                <div>
+                    <object style='width: 110%;' data='images/final_zompi_basque_sync.png'></object>
+                </div>
+            </div>
+            </section>
+            
+            <section>
+            <h2>Syncretisms: Lezgian</h2>
+            <ul>
+                <li>And in Lezgian there is a <span class='sc'>erg/iness</span> syncretism.</li>
+            </ul>
+            <div class='center-image'>
+                <div>
+                    <object style='width: 110%;' data='images/final_zompi_lezgian.png'></object>
+                </div>
+            </div>
+            </section>
+            
+            <section>
+            <h2>Missing Syncretisms</h2>
+            <ul>
+                <li>However, there is no syncretism that targets <span class='sc'>nom/OBL</span> or <span class='sc'>abs/OBL</span>.</li>
+                <li>Recall:</li>
+            </ul>
+            <p class='whitespace'></p>
+            <div class='center-image fragment' data-fragment-index="2">
+                <div>
+                    <object style='width: 60%;' data='images/final_mz_vs_wf.png'></object>
+                </div>
+            </div>
+            <ul class="fragment" data-fragment-index="3">
+                <li>This generalisation makes little sense on the Woolford view, where ergative is lexical.</li>
+                <li class="fragment" data-fragment-index="4">Potentially, it could be the first lexical case...</li>
+            </ul>
+            </section>
+            
+            <section>
+            <h2>Syncretism in Tripartite</h2>
+            <ul>
+                <li>Tripartite languages have both an ergative and an accusative.</li>
+                <li>Were ergative the lowest lexical case, we expect:</li>
+                <ul>
+                    <li>Nominative–accusative syncretism possible.</li>
+                    <span class="fragment"><li class="fragment highlight-green">Nominative–ergative syncretism not possible.</li></span>
+                </ul>
+                <li>But, both syncretisms are possible.</li>
+            </ul>
+            </section>
+            
+            <section>
+            <h2>Jingulu: <span class='sc'>nom/acc</span></h2>
+            <ul>
+                <li>In Jingulu, <span class='sc'>nom/acc</span> are sometimes syncretic.</li>
+            </ul>
+            <div class='center-image'>
+                <div>
+                    <object style='width: 90%;' data='images/final_jingulu_nomacc_sync.png'></object>
+                </div>
+            </div>
+            </section>
+
+            <section>
+            <h2>Jingulu: <span class='sc'>nom/erg</span></h2>
+            <ul>
+                <li>But, there is also a <span class='sc'>nom/erg</span> syncretism.</li>
+            </ul>
+            <p class='whitespace'></p>
+            <div class='center-image'>
+                <div>
+                    <object style='width: 90%;' data='images/final_zompi_jingulu.png'></object>
+                </div>
+            </div>
+            </section>
+            
+            <section>
+            <h2>Syncretisms Djapu</h2>
+            <ul>
+                <li>We also see both in Djapu.</li>
+            </ul>
+            <div class='center-image'>
+                <div>
+                    <object style='width: 90%;' data='images/final_Djapu_syncs.png'></object>
+                </div>
+            </div>
+            </section>
+            
+            <section>
+            <h2>Tripartite</h2>
+            <ul>
+                <li>Zompí claims that it is not the case that anything goes.</li>
+                <li>There is no syncretism targeting nominative and another oblique.</li>
+                <li class="fragment" data-fragment-index="2">The containment is then as follows:</li>
+            </ul>
+            <div class='example-container fragment' data-fragment-index="2">
+            <div class='individual-example'>
+            <div class='example-number'><p class='ex'></p></div>
+            <!-- <div class='ab-counter'><p class='ab'></p></div> -->
+            <div class='example-sentence'><p><span class='sc'>unmarked</span> ⊂ <span class='sc'>accusative/ergative</span> ⊂ <span class='sc'>oblique</span></p></div>
+        </div>
+        <!-- <div class='individual-example'>
+            <div class='example-number'><p class=''></p></div>
+            <div class='ab-counter'><p class='ab'></p></div>
+            <div class='example-sentence'><p>Every oblique case (other than the genitive) must contain a marked core structural case. Every marked core structural case must contain an unmarked core structural case.</p></div>
+            </div> -->
+        </div>
+            <ul class="fragment" data-fragment-index="3">
+                <li>There is no ordering between accusative and ergative.</li>
+                <li>In other words, they are both treated as part of the same meta-class, dependent case.</li>
+            </ul>
+            </section>
+        </div>
+    </div>
+    <script src='js/reveal.js'></script>
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            // Display the page number of the current slide
+            slideNumber: true,
+            // Push each slide change to the browser history
+            history: true,
+            // Vertical centering of slides
+            center: false,
+            // Transition speed
+            transitionSpeed: 'slow', // default/fast/slow
+            viewDistance: 200,
+            menu: {
+                themes:
+                    [
+                        { name: 'Sof', theme: 'css/theme/sof.css' },
+                        { name: 'Moon', theme: 'css/theme/moon.css' },
+                        { name: 'Blood', theme: 'css/theme/blood.css' },
+                        { name: 'Beige', theme: 'css/theme/beige.css' },
+                        { name: 'Night', theme: 'css/theme/night.css' },
+                        { name: 'League', theme: 'css/theme/league.css' },
+                        { name: 'Serif', theme: 'css/theme/serif.css' },
+                        { name: 'Solarized', theme: 'css/theme/solarized.css' },
+                        { name: 'White', theme: 'css/theme/white.css' },
+                        { name: 'Sky', theme: 'css/theme/sky.css' },
+                    ]
+            },
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/reveal.js-menu/menu.js' },
+            ]
+        });
+    </script>
+    <script src='js/mermaid.js'></script>
+    <script>
+        mermaid.initialize({
+            theme: 'forest',
+            logLevel: 3,
+            flowchart: { curve: 'basis' },
+        });
+    </script>
+</body>
+
+</html>
