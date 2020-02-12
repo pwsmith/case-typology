@@ -1,6 +1,6 @@
-<!DOCTYPE html>
 <html>
-<head>
+    <head>
+        <!DOCTYPE html>
 <meta charset='utf-8'>
 <meta name='author' content='Pete'>
 <title></title>
@@ -25,7 +25,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <!--[if lt IE 9]>
 <script src='reveal.js/lib/js/html5shiv.js'></script>
 <![endif]-->
+<link rel="stylesheet" href="css/teaching_additions.css">
 <link rel='stylesheet' href='css/additions.css'>
+<link rel="stylesheet" href="additionscss.css">
 </head>
 <body>
 <div class='reveal'>
@@ -44,33 +46,129 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 </div>
 </section>
 
-<section>
-<div class='gloss-outer-container'>
-<div class='gloss-number-counter'><p class='ex'></p></div>
-<div class="judgement"><p>*</p></div>
-<div class='gloss_example'>
-    <ol class='sentence'>
-        <li>
-            <ol class='word'>
-                <li lang=target>Hello</li>
-                <li lang=en_MORPH>hello</li>
-            </ol>
-        </li>
-        <li>
-            <ol class='word'>
-                <li lang=target>World</li>
-                <li lang=en_MORPH>world</li>
-            </ol>
-        </li>
-    </ol>
 
-<p class='translation'>Hello World</p>
+<div class="abex">                          
+    <div class="gloss-outer-container">     
+        <div class="gloss-number-counter"><p class='ex'></p></div>
+<div class='judgement'><p>*</p></div> 
+<div class="gloss-example">
+       <ol class='sentence'>
+            <li>                   
+                <ol class='word'>  
+                    <li lang=target>Hello</li>
+                    <li lang=en_MORPH>hello</li>   
+                </ol>                                
+            </li>                                    
+            <li>                                     
+                <ol class='word'>                    
+                    <li lang=target>World!</li>
+                    <li lang=en_MORPH>world</li>
+                </ol>
+            </li>                          
+        </ol>                              
+    <p class='translation'>'Hello World!'</p>
+    </div>
+    </div>
 </div>
+
+
+    <div class='gloss-outer-container'>
+        <!-- <!-- <div><p class='ex'></p></div> --> 
+    <div class='gloss-number-counter'><p class='ex'></p></div>
+    <div class="gloss-ab-counter"><p class='ab'></p></div>
+    <!-- <div class='judgement'><p class="">*</p></div> -->
+    <div class='gloss_example'>
+        <ol class='sentence'>
+            <li>
+                <ol class='word'>
+                    <li lang=target>Hello</li>
+                    <li lang=en_MORPH>Hello</li>
+                </ol>
+            </li>
+            <li>
+                <ol class='word'>
+                    <li lang=target>Again</li>
+                    <li lang=en_MORPH>Again</li>
+                </ol>
+            </li>
+        </ol>
+    
+    <p class='translation'>Hello</p>
+    </div>
+    </div>
+
+    <div class='abex'>
+    <div class='gloss-outer-container'>
+    <div class='gloss-number-counter'><p class='ex'></p></div>
+    <div class="gloss-ab-counter"><p class='ab'></p></div>
+    <div class='judgement'><p class=""></p>*</div>
+    <div class='gloss_example'>
+        <ol class='sentence'>
+            <li>
+                <ol class='word'>
+                    <li lang=target>World</li>
+                    <li lang=en_MORPH>world</li>
+                </ol>
+            </li>
+        </ol>
+    <p class='translation'>world</p>
+    </div>
+    </div>
+    <div class='gloss-outer-container'>
+    <div class='gloss-number-counter'></div>
+    <div class='gloss-ab-counter'><p class='ab'></p></div>
+    <div class='judgement'><p>?</p></div>
+    <div class='gloss_example'>
+        <ol class='sentence'>
+            <li>
+                <ol class='word'>
+                    <li lang=target>Again</li>
+                    <li lang=en_MORPH>Again</li>
+                </ol>
+            </li>
+            <li>
+                <ol class='word'>
+                    <li lang=target></li>
+                    <li lang=en_MORPH></li>
+                </ol>
+            </li>
+        </ol>
+    
+    <p class='translation'>Again</p>
+    </div>
+    </div>
+    </div>
+
+<div class="abex">
+    <div class='gloss-outer-container'>
+        <div class="gloss-number-counter"><p class='ex'></p></div>
+        <div><p class="ab"></p></div>
+
+    </div>
 </div>
-</section>
+
+
+
+<div class='gloss-outer-container'>
+    <div class='gloss-number-counter'><p class='ex'></p></div>
+    <div class='gloss_example'>
+        <ol class='sentence'>
+            <li>
+                <ol class='word'>
+                    <li lang=target>Hello</li>
+                    <li lang=en_MORPH>Hello</li>
+                </ol>
+            </li>
+        </ol>
+    
+    <p class='translation'>Hello</p>
+    </div>
+    </div>
 
         </div>
     </div>
+
+ 
 <script src='js/reveal.js'></script>
 <script>
 // Full list of configuration options available at:
